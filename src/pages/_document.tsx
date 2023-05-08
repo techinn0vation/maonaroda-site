@@ -5,7 +5,9 @@ export default class DocumentComponent extends Document {
   render() {
     return (
       <Html lang="pt-BR">
-        <Head></Head>
+        <Head>
+          <link rel="shortcut icon" href="/assets/logo.png" type="image/png" />
+        </Head>
         <body>
           <Main />
           <NextScript />
