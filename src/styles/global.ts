@@ -11,15 +11,14 @@ export const GlobalStyle = createGlobalStyle`
   html{
     font-size: 62.5%;
   }
-  html, body {
-    width: 100vw;
-    height: 100vh;
-  }
   body {
+    width: 100%;
+    min-height: 100vh;
+
     --webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
     text-rendering: optimizeLegibility;
-    font-family: 'inter', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     background: ${globalBackground};
 
     &::-webkit-scrollbar {
@@ -27,4 +26,5 @@ export const GlobalStyle = createGlobalStyle`
       height: 0;
     }
   }
+
 `
