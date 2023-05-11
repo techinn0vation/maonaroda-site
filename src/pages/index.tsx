@@ -5,7 +5,10 @@ const HomePage = () => {
   const router = useRouter()
 
   useEffect(() => {
-    void router.push('/home')
+    const redirect = async () => {
+      await router.push('/home')
+    }
+    void redirect()
   }, [router])
 
   return null

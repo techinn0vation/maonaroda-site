@@ -81,6 +81,7 @@ export const SubHeadlineHero = styled.div`
     line-height: 2.1rem;
     margin-left: 0.9rem;
   }
+  scroll-behavior: smooth;
 
   &::-webkit-scrollbar {
     width: 0.3rem;
@@ -97,6 +98,10 @@ export const SubHeadlineHero = styled.div`
   &:nth-child(n + 3) {
     height: auto;
     overflow: hidden;
+
+    @media (width > ${props => props.theme.screenSize.sizeMD}) {
+      margin: 3rem 0;
+    }
   }
 `
 export const DisplayMark = styled.span`
@@ -122,11 +127,12 @@ export const ButtonDownload = styled.button`
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  outline-offset: 4px;
+  outline-offset: 0.2rem;
 
-  transition: ease-in 0.03s;
-  &:active {
+  transition: ease-in 0.06s;
+  &:focus:active {
     transform: translateY(0.2rem);
+    outline: solid ${props => props.theme.colors.colorE} 0.2rem;
   }
 
   p {
@@ -187,38 +193,4 @@ export const FrameFloating = styled.div`
     left: auto;
     right: 0;
   }
-`
-export const WrapperAssets = styled.div`
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
-
-  @media (width > ${props => props.theme.screenSize.sizeMD}) {
-    grid-template-columns: repeat(7, 1fr);
-  }
-`
-export const BlockAssets = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-
-  p {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    text-transform: uppercase;
-    color: ${props => props.theme.colors.colorB};
-  }
-`
-export const FrameAssets = styled(Image)`
-  width: 100%;
-  display: block;
 `
