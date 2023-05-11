@@ -5,7 +5,7 @@ const HomePage = () => {
   const router = useRouter()
 
   useEffect(() => {
-    void router.replace('/home')
+    void router.push('/home')
   }, [router])
 
   return null

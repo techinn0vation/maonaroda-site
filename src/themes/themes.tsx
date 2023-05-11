@@ -5,12 +5,12 @@ export const theme = {
     colorC: '#FCFCFC',
     colorD: '#212121',
     colorE: '#623CEA',
-    colorF: '#F4F3FD'
+    colorF: '#F4F3FD',
+    colorG: '#D6D1D1'
   },
   screenSize: {
     sizeSM: '320px',
     sizeMD: '600px',
-    sizeLG: '992px',
-    sizeXLG: '1024px'
+    sizeLG: '992px'
   }
 }

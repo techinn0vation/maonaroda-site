@@ -66,7 +66,7 @@ export const DisplayLink = styled(Link)`
   }
   text-decoration: none;
   cursor: pointer;
-  padding: 0.5rem;
+  margin-left: 1rem;
   position: relative;
   &:hover {
     color: ${props => props.theme.colors.colorB};
@@ -98,8 +98,8 @@ export const DisplayLink = styled(Link)`
   }
 
   &:nth-of-type(5) {
-    width: 9.5rem;
-    height: 3rem;
+    width: 9rem;
+    padding: 0.2rem;
     display: flex;
     flex-direction: row;
     justify-content: center;

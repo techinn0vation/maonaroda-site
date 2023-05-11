@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     --webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
     text-rendering: optimizeLegibility;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: ${globalBackground};
 
     &::-webkit-scrollbar {
