@@ -10,11 +10,22 @@ export const WrapperHero = styled.header`
   justify-content: center;
   align-items: center;
   gap: 3rem;
+
+  animation: heroAnim 0.9s ease 0s 1 normal forwards;
+  @keyframes heroAnim {
+    0% {
+      transform: scaleX(0);
+    }
+
+    100% {
+      transform: scaleX(1);
+    }
+  }
 `
 export const BlockHero = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   gap: 3rem;
@@ -32,33 +43,6 @@ export const ContentHero = styled.div`
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  animation: left 0.5s ease 0s 1 normal forwards;
-  @keyframes left {
-    0% {
-      opacity: 0;
-      transform: translateX(-25rem);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  &:nth-child(2) {
-    animation: right 0.5s ease 0s 1 normal forwards;
-    @keyframes right {
-      0% {
-        opacity: 0;
-        transform: translateX(25rem);
-      }
-
-      100% {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-  }
 `
 export const HeadlineHero = styled.div`
   width: 100%;
@@ -79,7 +63,7 @@ export const HeadlineHero = styled.div`
 `
 export const SubHeadlineHero = styled.div`
   width: 100%;
-  height: 10.5rem;
+  height: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -111,6 +95,7 @@ export const SubHeadlineHero = styled.div`
   }
 
   &:nth-child(n + 3) {
+    height: auto;
     overflow: hidden;
   }
 `
@@ -211,17 +196,6 @@ export const WrapperAssets = styled.div`
   gap: 2rem;
   justify-content: center;
   align-items: center;
-
-  animation: center 0.5s ease 0s 1 normal forwards;
-  @keyframes center {
-    0% {
-      transform: scale(0);
-    }
-
-    100% {
-      transform: scale(1);
-    }
-  }
 
   @media (width > ${props => props.theme.screenSize.sizeMD}) {
     grid-template-columns: repeat(7, 1fr);
