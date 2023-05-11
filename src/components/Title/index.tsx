@@ -1,7 +1,7 @@
 import { DisplayTitle } from './styles'
 
 interface PropTitle {
-  title: string
+  title: string;
 }
 
 export default function Title(props: PropTitle) {

@@ -6,7 +6,7 @@ import { HiMenuAlt1 } from 'react-icons/hi'
 import { IoClose } from 'react-icons/io5'
 
 interface sideBar {
-  isOpen: boolean
+  isOpen: boolean;
 }
 
 export const WrapperNavigation = styled.nav`
@@ -30,7 +30,10 @@ export const WrapperSidebar = styled.div`
   align-items: center;
   gap: 3rem;
 `
-export const ContentLinks = styled.div<sideBar>`
+export const ContentLinks =
+  styled.div <
+  sideBar >
+  `
   display: flex;
   flex-direction: row;
   justify-content: center;
