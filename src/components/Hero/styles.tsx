@@ -11,7 +11,7 @@ export const WrapperHero = styled.header`
   align-items: center;
   gap: 3rem;
 
-  animation: heroAnim 0.9s ease 0s 1 normal forwards;
+  animation: heroAnim 0.4s ease 0s 1 normal forwards;
   @keyframes heroAnim {
     0% {
       transform: scaleX(0);
@@ -25,12 +25,12 @@ export const WrapperHero = styled.header`
 export const BlockHero = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 3rem;
 
-  @media (width > ${props => props.theme.screenSize.sizeMD}) {
+  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
@@ -42,7 +42,7 @@ export const ContentHero = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2.5rem;
 `
 export const HeadlineHero = styled.div`
   width: 100%;
@@ -50,15 +50,27 @@ export const HeadlineHero = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  text-align: left;
 
   h1 {
     color: ${props => props.theme.colors.colorB};
     font-style: normal;
     font-weight: 700;
-    font-size: 2.5rem;
-    line-height: 3.75rem;
+    font-size: 2rem;
+    line-height: 3rem;
     text-transform: uppercase;
+  }
+
+  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+    h1 {
+      font-size: 2.5rem;
+      line-height: 3.7rem;
+    }
+  }
+  @media (width >= ${props => props.theme.screenSize.sizeLG}) {
+    h1 {
+      font-size: 3.5rem;
+      line-height: 5.2rem;
+    }
   }
 `
 export const SubHeadlineHero = styled.div`
@@ -68,20 +80,20 @@ export const SubHeadlineHero = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 2.5rem;
   text-align: left;
   overflow-y: scroll;
+  scroll-behavior: smooth;
   direction: rtl;
 
   p {
     color: ${props => props.theme.colors.colorB};
     font-style: normal;
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 2.1rem;
-    margin-left: 0.9rem;
+    margin-left: 1rem;
   }
-  scroll-behavior: smooth;
 
   &::-webkit-scrollbar {
     width: 0.3rem;
@@ -99,7 +111,7 @@ export const SubHeadlineHero = styled.div`
     height: auto;
     overflow: hidden;
 
-    @media (width > ${props => props.theme.screenSize.sizeMD}) {
+    @media (width >= ${props => props.theme.screenSize.sizeMD}) {
       margin: 3rem 0;
     }
   }
@@ -108,28 +120,28 @@ export const DisplayMark = styled.span`
   color: ${props => props.theme.colors.colorB};
   font-style: normal;
   font-weight: 500;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 2.1rem;
   margin-left: 0.9rem;
   direction: ltr;
 `
 export const TextMark = styled.span`
   color: ${props => props.theme.colors.colorE};
-  font-weight: 800;
+  font-weight: 700;
 `
 export const ButtonDownload = styled.button`
   width: 100%;
   border-radius: 1rem;
-  height: 5.5rem;
+  padding: 1.5rem;
   background: ${props => props.theme.colors.colorE};
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   outline-offset: 0.2rem;
 
-  transition: ease-in 0.06s;
+  transition: ease-in 0.09s;
   &:focus:active {
     transform: translateY(0.2rem);
     outline: solid ${props => props.theme.colors.colorE} 0.2rem;
@@ -140,44 +152,43 @@ export const ButtonDownload = styled.button`
     font-style: normal;
     font-weight: 600;
     font-size: 1.6rem;
-    line-height: 2.1rem;
+    line-height: 2.4rem;
     &::first-letter {
       text-transform: capitalize;
     }
   }
 
-  @media (width > ${props => props.theme.screenSize.sizeLG}) {
-    width: 40rem;
-    height: 5rem;
+  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+    width: 30rem;
     cursor: pointer;
   }
 `
 export const BsArrowIcon = styled(BsFillArrowDownCircleFill)`
   color: ${props => props.theme.colors.colorC};
-  font-size: 2rem;
+  font-size: 1.6rem;
+  outline: solid ${props => props.theme.colors.colorC} 0.1rem;
+  border-radius: 100%;
+  padding: 0.09rem;
 `
 export const ContentFrame = styled.div`
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  position: relative;
   padding: 1.5rem;
+  position: relative;
 
-  @media (width > ${props => props.theme.screenSize.sizeLG}) {
+  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
     justify-content: flex-start;
     align-items: flex-start;
   }
 `
 export const BackgroundFrame = styled(Image)`
   width: 100%;
-  height: 20.5rem;
+  height: 100%;
   box-shadow: 1rem -1rem 0 0 ${props => props.theme.colors.colorE};
-
-  @media (width > ${props => props.theme.screenSize.sizeSM}) {
-    height: auto;
-  }
 `
 export const FrameFloating = styled.div`
   width: 7rem;

@@ -15,6 +15,7 @@ export const WrapperNavigation = styled.nav`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin: 0 0 3rem;
 `
 export const LogoBranding = styled(Image)`
   width: 100%;
@@ -38,10 +39,10 @@ export const ContentLinks =
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   position: relative;
 
-  @media (width <= ${props => props.theme.screenSize.sizeLG}) {
+  @media (width <= ${props => props.theme.screenSize.sizeMD}) {
     width: 100%;
     height: 100vh;
     background-color: ${props => props.theme.colors.colorC};
@@ -60,10 +61,10 @@ export const ContentLinks =
 `
 export const DisplayLink = styled(Link)`
   color: ${props => props.theme.colors.colorD};
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 600;
-  line-height: 2.4rem;
+  line-height: 2.1rem;
   &::first-letter {
     text-transform: capitalize;
   }
@@ -120,7 +121,7 @@ export const DisplayLink = styled(Link)`
 export const ContentButtons = styled.div`
   z-index: 999;
 
-  @media (width > ${props => props.theme.screenSize.sizeLG}) {
+  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
     display: none;
   }
 `
