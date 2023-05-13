@@ -118,7 +118,7 @@ export const FrameBanner = styled(Image)`
   height: auto;
 
   &:nth-of-type(1) {
-    margin-top: 10rem;
+    margin-top: 5rem;
   }
 `
 export const DownloadInfoStore = styled.div`
