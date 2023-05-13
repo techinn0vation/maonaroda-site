@@ -6,7 +6,7 @@ export const theme = {
     colorD: '#212121',
     colorE: '#623CEA',
     colorF: '#F4F3FD',
-    colorG: '#D6D1D1'
+    colorG: '#9E9E9E'
   },
   screenSize: {
     sizeSM: '320px',

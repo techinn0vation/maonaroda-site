@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export const WrapperAssets = styled.div`
   width: 100%;
@@ -33,13 +32,13 @@ export const ContentAssets = styled.div`
 
 export const BlockAssets = styled.div`
   width: 100%;
-  flex: 1 0 45%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   padding: 0.5rem;
+  cursor: default;
 
   p {
     font-style: normal;
@@ -50,12 +49,15 @@ export const BlockAssets = styled.div`
     color: ${props => props.theme.colors.colorB};
   }
 
-  @media (width > ${props => props.theme.screenSize.sizeMD}) {
-    flex: 1;
+  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+    flex-direction: column;
+  }
+  @media (width >= ${props => props.theme.screenSize.sizeLG}) {
+    flex-direction: row;
   }
 `
 export const FrameAssets = styled(Image)`
-  width: 3.5rem;
+  width: 3.2rem;
   display: block;
 `
 export const WrapperIndicators = styled.div`
@@ -66,19 +68,20 @@ export const WrapperIndicators = styled.div`
   align-items: center;
   gap: 1rem;
 
-  @media (width > ${props => props.theme.screenSize.sizeLG}) {
+  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
     display: none;
   }
 `
-export const DisplayIndicators = styled(Link)`
+export const DisplayIndicators = styled.input`
   width: 1.2rem;
   height: 1.2rem;
   border-radius: 100%;
+
+  appearance: none;
   background: ${props => props.theme.colors.colorE};
-  opacity: 0.75;
-  transition: opacity easy 250ms;
 
   &:focus {
-    opacity: 1;
+    outline: solid 0.1rem ${props => props.theme.colors.colorE};
+    outline-offset: 0.3rem;
   }
 `

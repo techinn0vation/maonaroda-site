@@ -1,4 +1,5 @@
 import Text from '../Text'
+
 import {
   WrapperAssets,
   BlockAssets,
@@ -17,9 +18,19 @@ import SVG_B012 from '..//..//assets/svg/SVG_B012.svg'
 import SVG_B013 from '..//..//assets/svg/SVG_B013.svg'
 
 export default function Carousel() {
+  const handleClick = (id: string) => {
+    const slideElement: HTMLElement | null = document.getElementById(id)
+    if (slideElement !== null) {
+      const slidePosition = slideElement.offsetLeft
+      document
+        .getElementById('content-assets')
+        ?.scrollTo({ left: slidePosition, behavior: 'smooth' })
+    }
+  }
+
   return (
     <WrapperAssets>
-      <ContentAssets>
+      <ContentAssets id="content-assets">
         <BlockAssets id="slide-1">
           <FrameAssets src={SVG_B007} alt="Linkedin" />
           <Text message="linkedin" />
@@ -50,13 +61,48 @@ export default function Carousel() {
         </BlockAssets>
       </ContentAssets>
       <WrapperIndicators>
-        <DisplayIndicators href="#slide-1" />
-        <DisplayIndicators href="#slide-2" />
-        <DisplayIndicators href="#slide-3" />
-        <DisplayIndicators href="#slide-4" />
-        <DisplayIndicators href="#slide-5" />
-        <DisplayIndicators href="#slide-6" />
-        <DisplayIndicators href="#slide-7" />
+        <DisplayIndicators
+          type="radio"
+          onClick={() => {
+            handleClick('slide-1')
+          }}
+        />
+        <DisplayIndicators
+          type="radio"
+          onClick={() => {
+            handleClick('slide-2')
+          }}
+        />
+        <DisplayIndicators
+          type="radio"
+          onClick={() => {
+            handleClick('slide-3')
+          }}
+        />
+        <DisplayIndicators
+          type="radio"
+          onClick={() => {
+            handleClick('slide-4')
+          }}
+        />
+        <DisplayIndicators
+          type="radio"
+          onClick={() => {
+            handleClick('slide-5')
+          }}
+        />
+        <DisplayIndicators
+          type="radio"
+          onClick={() => {
+            handleClick('slide-6')
+          }}
+        />
+        <DisplayIndicators
+          type="radio"
+          onClick={() => {
+            handleClick('slide-7')
+          }}
+        />
       </WrapperIndicators>
     </WrapperAssets>
   )
