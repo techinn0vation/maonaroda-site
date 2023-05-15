@@ -1,12 +1,11 @@
-import Image from 'next/image'
 import styled from 'styled-components'
+import Image from 'next/image'
 
 import { BsApple } from 'react-icons/bs'
 import { IoLogoGooglePlaystore } from 'react-icons/io5'
 
 export const WrapperBanner = styled.section`
   width: 100%;
-  min-width: 100vw;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -15,28 +14,32 @@ export const WrapperBanner = styled.section`
   padding: 2rem;
   position: relative;
 
-  &::before {
+  &::after {
     content: '';
-    width: 100%;
-    height: 50vh;
-    background: ${props => props.theme.colors.colorF};
+    width: 100vw;
+    height: 100%;
+    background: ${props => props.theme.colors.colorB};
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
     position: absolute;
     top: 0;
   }
 
   @media (width >= ${props => props.theme.screenSize.sizeMD}) {
-    &::before {
+    &::after {
       content: '';
       width: 100%;
-      height: 70vh;
-      background: ${props => props.theme.colors.colorF};
+      height: 100%;
+      background: ${props => props.theme.colors.colorB};
+      clip-path: polygon(0 0, 100% 50%, 0 100%, 0% 50%);
       position: absolute;
       top: 0;
     }
   }
 `
-export const ContentBanner = styled.div`
+export const BlockBanner = styled.div`
   width: 100%;
+  max-width: 102.4rem;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,18 +48,17 @@ export const ContentBanner = styled.div`
   z-index: 999;
 
   @media (width >= ${props => props.theme.screenSize.sizeMD}) {
-    max-width: 102.4rem;
     flex-direction: row;
-    padding: 2rem;
+    padding: 0rem;
   }
 `
-export const BlockBanner = styled.div`
+export const ContentBanner = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 2rem;
 `
 export const HeadlineBanner = styled.div`
   width: 100%;
@@ -68,7 +70,7 @@ export const HeadlineBanner = styled.div`
   text-align: center;
 
   h1 {
-    color: ${props => props.theme.colors.colorB};
+    color: ${props => props.theme.colors.colorC};
     font-style: normal;
     font-weight: 700;
     font-size: 2rem;
@@ -77,7 +79,7 @@ export const HeadlineBanner = styled.div`
   }
 
   p {
-    color: ${props => props.theme.colors.colorG};
+    color: ${props => props.theme.colors.colorC};
     font-style: normal;
     font-weight: 500;
     font-size: 1.4rem;
@@ -89,12 +91,10 @@ export const HeadlineBanner = styled.div`
 
   @media (width >= ${props => props.theme.screenSize.sizeMD}) {
     h1 {
-      font-size: 2.5rem;
-      line-height: 3.7rem;
+      font-size: 2rem;
+      line-height: 3rem;
     }
-    text-align: left;
   }
-
   @media (width >= ${props => props.theme.screenSize.sizeLG}) {
     h1 {
       font-size: 2.5rem;
@@ -102,7 +102,60 @@ export const HeadlineBanner = styled.div`
     }
   }
 `
+export const WrapperStore = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+`
+export const BlockStore = styled.div`
+  width: 100%;
+  border: solid ${props => props.theme.colors.colorC} 0.1rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`
+export const IconGoogleStore = styled(IoLogoGooglePlaystore)`
+  color: ${props => props.theme.colors.colorC};
+  font-size: 3rem;
+`
+export const IconAppStore = styled(BsApple)`
+  color: ${props => props.theme.colors.colorC};
+  font-size: 3rem;
+`
+export const BlockTextStore = styled.div`
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 
+  h1 {
+    color: ${props => props.theme.colors.colorC};
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  p {
+    color: ${props => props.theme.colors.colorC};
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-transform: capitalize;
+  }
+`
 export const WrapperFrameBanner = styled.div`
   width: 100%;
   display: flex;
@@ -111,64 +164,14 @@ export const WrapperFrameBanner = styled.div`
   align-items: center;
   gap: 2rem;
 `
-export const FrameBanner = styled(Image)`
+export const BlockFrameBanner = styled.div`
   width: 100%;
-  max-width: 45%;
-  margin: 0 auto;
   height: auto;
-
-  &:nth-of-type(1) {
-    margin-top: 5rem;
-  }
+  display: block;
+  margin: 0;
 `
-export const DownloadInfoStore = styled.div`
+export const ImageFrameBanner = styled(Image)`
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-`
-export const BlockInfoStore = styled.div`
-  width: 100%;
-  border: solid 0.1rem ${props => props.theme.colors.colorB};
-  border-radius: 0.6rem;
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-`
-export const DescriptionInfoStore = styled.div`
-  width: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.1rem;
-
-  p {
-    color: ${props => props.theme.colors.colorB};
-    text-transform: capitalize;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-
-    &:nth-child(2) {
-      font-style: normal;
-      font-weight: 700;
-      font-size: 1.4rem;
-      line-height: 2.1rem;
-    }
-  }
-`
-export const IconStoreApple = styled(BsApple)`
-  color: ${props => props.theme.colors.colorB};
-  font-size: 2.8rem;
-`
-export const IconStoreGoogle = styled(IoLogoGooglePlaystore)`
-  color: ${props => props.theme.colors.colorB};
-  font-size: 2.8rem;
+  height: auto;
+  object-fit: contain;
 `

@@ -74,7 +74,7 @@ export const BlockTips = styled.div`
 `
 export const ContentFrameTips = styled.div`
   width: 100%;
-  height: 30rem;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,6 +82,7 @@ export const ContentFrameTips = styled.div`
 `
 export const FrameImageTips = styled(Image)`
   width: 100%;
+  height: 100%;
   display: block;
   object-fit: cover;
   margin: 0;

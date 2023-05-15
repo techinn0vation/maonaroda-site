@@ -5,49 +5,55 @@ import IMG_B004 from '..//..//..//public/img/IMG_B004.png'
 
 import {
   BlockBanner,
-  BlockInfoStore,
+  BlockFrameBanner,
+  BlockStore,
+  BlockTextStore,
   ContentBanner,
-  DescriptionInfoStore,
-  DownloadInfoStore,
-  FrameBanner,
   HeadlineBanner,
-  IconStoreApple,
-  IconStoreGoogle,
+  IconAppStore,
+  IconGoogleStore,
+  ImageFrameBanner,
   WrapperBanner,
-  WrapperFrameBanner
+  WrapperFrameBanner,
+  WrapperStore
 } from './styles'
+
 import Text from '../Text'
 
 export default function Banner() {
   return (
     <WrapperBanner>
-      <ContentBanner>
-        <BlockBanner>
+      <BlockBanner>
+        <ContentBanner>
           <HeadlineBanner>
-            <Title title="faça o downloda do nosso aplicativo" />
+            <Title title="faça o download do nosso aplicativo" />
           </HeadlineBanner>
-          <DownloadInfoStore>
-            <BlockInfoStore>
-              <IconStoreGoogle />
-              <DescriptionInfoStore>
-                <Text message="disponível na" />
+          <WrapperStore>
+            <BlockStore>
+              <IconGoogleStore />
+              <BlockTextStore>
+                <Title title="disponível na" />
                 <Text message="google play" />
-              </DescriptionInfoStore>
-            </BlockInfoStore>
-            <BlockInfoStore>
-              <IconStoreApple />
-              <DescriptionInfoStore>
-                <Text message="disponível na" />
+              </BlockTextStore>
+            </BlockStore>
+            <BlockStore>
+              <IconAppStore />
+              <BlockTextStore>
+                <Title title="disponível na" />
                 <Text message="app store" />
-              </DescriptionInfoStore>
-            </BlockInfoStore>
-          </DownloadInfoStore>
-        </BlockBanner>
+              </BlockTextStore>
+            </BlockStore>
+          </WrapperStore>
+        </ContentBanner>
         <WrapperFrameBanner>
-          <FrameBanner src={IMG_B003} alt="" />
-          <FrameBanner src={IMG_B004} alt="" />
+          <BlockFrameBanner>
+            <ImageFrameBanner src={IMG_B003} alt="" />
+          </BlockFrameBanner>
+          <BlockFrameBanner>
+            <ImageFrameBanner src={IMG_B004} alt="" />
+          </BlockFrameBanner>
         </WrapperFrameBanner>
-      </ContentBanner>
+      </BlockBanner>
     </WrapperBanner>
   )
 }

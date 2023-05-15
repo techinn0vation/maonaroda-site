@@ -25,7 +25,7 @@ export const ContentAssets = styled.div`
     width: 0;
   }
 
-  @media (width > ${props => props.theme.screenSize.sizeMD}) {
+  @media (width > ${props => props.theme.screenSize.sizeLG}) {
     overflow: hidden;
   }
 `
@@ -68,7 +68,7 @@ export const WrapperIndicators = styled.div`
   align-items: center;
   gap: 1rem;
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (width >= ${props => props.theme.screenSize.sizeLG}) {
     display: none;
   }
 `

@@ -10,10 +10,11 @@ export const WrapperCategorias = styled.section`
   gap: 3rem;
   background: ${props => props.theme.colors.colorF};
   border-radius: 2.4rem;
-  padding: 1.5rem;
+  padding: 2rem;
 
   @media (width >= ${props => props.theme.screenSize.sizeMD}) {
-    padding: 8rem;
+    width: 100%;
+    height: 40rem;
   }
 `
 export const HeadlineCategorias = styled.div`
@@ -26,6 +27,7 @@ export const HeadlineCategorias = styled.div`
   h1 {
     color: ${props => props.theme.colors.colorB};
     font-style: normal;
+    white-space: nowrap;
     font-weight: 700;
     font-size: 2rem;
     line-height: 3rem;
@@ -47,21 +49,26 @@ export const HeadlineCategorias = styled.div`
 `
 export const ContentCategorias = styled.div`
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   gap: 2rem;
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
-    grid-template-columns: repeat(6, 1fr);
-    white-space: nowrap;
-    max-width: 30rem;
-    margin: 0 auto;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  @media (width >= ${props => props.theme.screenSize.sizeLG}) {
+    justify-content: center;
   }
 `
 export const BlockCategoria = styled.div`
-  width: 100%;
+  width: 10rem;
   height: 10rem;
   display: flex;
   flex-direction: column;
@@ -72,18 +79,25 @@ export const BlockCategoria = styled.div`
   border: solid ${props => props.theme.colors.colorB} 0.2rem;
   border-radius: 0 1rem 1rem;
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
-    width: 9.7rem;
+  @media (width >= ${props => props.theme.screenSize.sizeLG}) {
+    transition: transform 0.25s ease;
+    &:hover {
+      transform: scale(0.9);
+      transition: transform 0.25s ease;
+    }
   }
 `
 export const FrameCategoria = styled(Image)`
   width: 100%;
+  object-fit: contain;
+  display: block;
 `
 export const NameCategoria = styled.span`
   font-style: normal;
   font-weight: 600;
   font-size: 1.4rem;
   line-height: 2.1rem;
+  white-space: nowrap;
   color: ${props => props.theme.colors.colorB};
   &::first-letter {
     text-transform: capitalize;
