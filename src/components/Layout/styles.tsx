@@ -9,5 +9,5 @@ export const WrapperLayout = styled.main`
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 2rem 0;
 `

@@ -14,7 +14,7 @@ export const WrapperCategorias = styled.section`
 
   @media (width >= ${props => props.theme.screenSize.sizeMD}) {
     width: 100%;
-    height: 40rem;
+    height: 50vh;
   }
 `
 export const HeadlineCategorias = styled.div`

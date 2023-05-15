@@ -52,7 +52,7 @@ export const HeadlineAboutUs = styled.div`
 export const ButtonAboutUs = styled(Link)`
   width: 100%;
   max-width: 20rem;
-  height: 6rem;
+  padding: 1.6rem;
   background: ${props => props.theme.colors.colorB};
   border-radius: 1.3rem;
   display: flex;

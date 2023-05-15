@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Navigation from '@/components/Navigation'
 import { WrapperLayout } from './styles'
+import Footer from '../Footer'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -10,6 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </Head>
       <Navigation />
       {children}
+      <Footer />
     </WrapperLayout>
   )
 }
