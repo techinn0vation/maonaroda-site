@@ -5,7 +5,7 @@ export const theme = {
     colorC: '#FCFCFC',
     colorD: '#212121',
     colorE: '#623CEA',
-    colorF: '#F4F3FD',
+    colorF: '#F5F5F5',
     colorG: '#9E9E9E',
     colorH: '#25D366',
     colorI: '#E4405F'

@@ -20,7 +20,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
     background: ${globalBackground};
     scroll-behavior: smooth;
-  
     &::-webkit-scrollbar {
       width: 0;
       height: 0;

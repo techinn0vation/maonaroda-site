@@ -69,7 +69,7 @@ export const ContentStepByStep = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
   z-index: 1;
@@ -112,8 +112,8 @@ export const WrapperFrameStepByStep = styled.div`
 `
 export const FrameStepByStep = styled(Image)`
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 33rem;
+  object-fit: contain;
 `
 export const InformStepByStep = styled.div`
   width: 100%;
