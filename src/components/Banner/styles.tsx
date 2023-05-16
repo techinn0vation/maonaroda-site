@@ -4,7 +4,14 @@ import Image from 'next/image'
 import { BsApple } from 'react-icons/bs'
 import { IoLogoGooglePlaystore } from 'react-icons/io5'
 
-export const WrapperBanner = styled.section`
+interface Animation {
+  inView: boolean;
+}
+
+export const WrapperBanner =
+  styled.section <
+  Animation >
+  `
   width: 100%;
   height: auto;
   display: flex;
@@ -35,6 +42,10 @@ export const WrapperBanner = styled.section`
       top: 0;
     }
   }
+
+  opacity: ${props => (props.inView ? 1 : 0)};
+  transform: translateX(${props => (props.inView ? 0 : '-25rem')});
+  transition: opacity 0.66s, transform 0.66s;
 `
 export const BlockBanner = styled.div`
   width: 100%;
@@ -45,7 +56,7 @@ export const BlockBanner = styled.div`
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  z-index: 999;
+  z-index: 1;
 
   @media (width >= ${props => props.theme.screenSize.sizeMD}) {
     flex-direction: row;
@@ -140,8 +151,8 @@ export const BlockTextStore = styled.div`
     color: ${props => props.theme.colors.colorC};
     font-style: normal;
     font-weight: 500;
-    font-size: 1.2rem;
-    line-height: 1.8rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     &::first-letter {
       text-transform: capitalize;
     }

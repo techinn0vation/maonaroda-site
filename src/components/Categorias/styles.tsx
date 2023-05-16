@@ -1,7 +1,14 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 
-export const WrapperCategorias = styled.section`
+interface Animation {
+  inView: boolean;
+}
+
+export const WrapperCategorias =
+  styled.section <
+  Animation >
+  `
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -14,8 +21,12 @@ export const WrapperCategorias = styled.section`
 
   @media (width >= ${props => props.theme.screenSize.sizeMD}) {
     width: 100%;
-    height: 50vh;
+    min-height: 50vh;
   }
+
+  opacity: ${props => (props.inView ? 1 : 0)};
+  transform: translateX(${props => (props.inView ? 0 : '-25rem')});
+  transition: opacity 0.66s, transform 0.66s;
 `
 export const HeadlineCategorias = styled.div`
   width: 100%;
@@ -35,12 +46,6 @@ export const HeadlineCategorias = styled.div`
   }
 
   @media (width >= ${props => props.theme.screenSize.sizeMD}) {
-    h1 {
-      font-size: 2.5rem;
-      line-height: 3.7rem;
-    }
-  }
-  @media (width >= ${props => props.theme.screenSize.sizeLG}) {
     h1 {
       font-size: 2.5rem;
       line-height: 3.7rem;
@@ -82,7 +87,7 @@ export const BlockCategoria = styled.div`
   @media (width >= ${props => props.theme.screenSize.sizeLG}) {
     transition: transform 0.25s ease;
     &:hover {
-      transform: scale(0.9);
+      transform: scale(0.95);
       transition: transform 0.25s ease;
     }
   }

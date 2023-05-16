@@ -1,8 +1,14 @@
 import styled from 'styled-components'
 import Link from 'next/link'
-import Image from 'next/image'
 
-export const WrapperFooter = styled.footer`
+interface Animation {
+  inView: boolean;
+}
+
+export const WrapperFooter =
+  styled.footer <
+  Animation >
+  `
   width: 100%;
   min-width: 100vw;
   display: flex;
@@ -11,6 +17,10 @@ export const WrapperFooter = styled.footer`
   align-items: center;
   padding: 2rem;
   background: ${props => props.theme.colors.colorF};
+
+  opacity: ${props => (props.inView ? 1 : 0)};
+  transform: translateY(${props => (props.inView ? 0 : '25rem')});
+  transition: opacity 0.66s, transform 0.66s;
 
   @media (width >= ${props => props.theme.screenSize.sizeMD}) {
     gap: 2rem;
@@ -49,30 +59,43 @@ export const BlockFooter = styled.div`
   }
 `
 export const RowBlock = styled.div`
-  p {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.6rem;
-    line-height: 2.1rem;
-    text-transform: uppercase;
-    color: ${props => props.theme.colors.colorA};
-  }
-`
-export const LinkField = styled(Link)`
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
+  text-align: center;
 
   p {
     font-style: normal;
     font-weight: 600;
     font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+    color: ${props => props.theme.colors.colorA};
+  }
+`
+export const LinkField = styled(Link)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  cursor: default;
+
+  p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.4rem;
     line-height: 2.1rem;
     text-transform: uppercase;
     color: ${props => props.theme.colors.colorB};
+  }
+
+  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+    p {
+      cursor: pointer;
+    }
   }
 `
 export const IconsFields = styled.div`
@@ -90,14 +113,44 @@ export const LinkIcon = styled(Link)`
   align-items: center;
 
   color: ${props => props.theme.colors.colorA};
-  font-size: 2.3rem;
+  font-size: 2rem;
   outline: solid ${props => props.theme.colors.colorA} 0.2rem;
   border-radius: 100%;
   padding: 0.5rem;
 
   transition: ease-in 0.09s;
+
   &:focus:active {
     transform: translateY(0.2rem);
+  }
+
+  &:nth-child(1):hover {
+    transition: ease-in 0.09s;
+
+    color: ${props => props.theme.colors.colorB};
+    outline: solid ${props => props.theme.colors.colorB} 0.2rem;
+    box-shadow: 0 0 0.6rem 0 ${props => props.theme.colors.colorB};
+  }
+  &:nth-child(2):hover {
+    transition: ease-in 0.09s;
+
+    color: ${props => props.theme.colors.colorE};
+    outline: solid ${props => props.theme.colors.colorE} 0.2rem;
+    box-shadow: 0 0 0.6rem 0 ${props => props.theme.colors.colorE};
+  }
+  &:nth-child(3):hover {
+    transition: ease-in 0.09s;
+
+    color: ${props => props.theme.colors.colorH};
+    outline: solid ${props => props.theme.colors.colorH} 0.2rem;
+    box-shadow: 0 0 0.6rem 0 ${props => props.theme.colors.colorH};
+  }
+  &:nth-child(4):hover {
+    transition: ease-in 0.09s;
+
+    color: ${props => props.theme.colors.colorI};
+    outline: solid ${props => props.theme.colors.colorI} 0.2rem;
+    box-shadow: 0 0 0.6rem 0 ${props => props.theme.colors.colorI};
   }
 `
 export const SubDescriptionFooter = styled.div`
@@ -106,39 +159,26 @@ export const SubDescriptionFooter = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-`
-export const LinkCellFooter = styled(Link)`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
+  gap: 0.5rem;
 
   p {
     font-style: normal;
     font-weight: 600;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 2.1rem;
     color: ${props => props.theme.colors.colorB};
     text-transform: lowercase;
+    cursor: default;
 
     &::first-letter {
       text-transform: capitalize;
     }
   }
-`
-export const DownloadQrCode = styled(Image)`
-  width: 100%;
-  max-width: 50%;
-  margin: 0 auto;
-  object-fit: contain;
 
   @media (width >= ${props => props.theme.screenSize.sizeMD}) {
-    max-width: 25%;
-    height: auto;
-    margin: 0 auto;
+    p {
+      cursor: pointer;
+    }
   }
 `
 export const CellSubFooter = styled.div`
@@ -152,8 +192,8 @@ export const CellSubFooter = styled.div`
   p {
     font-style: normal;
     font-weight: 700;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
   }
 `
 export const ContentTextCompany = styled.div`
@@ -169,7 +209,7 @@ export const ContentTextCompany = styled.div`
     font-style: normal;
     font-weight: 600;
     font-size: 1.4rem;
-    line-height: 2.4rem;
+    line-height: 2.1rem;
     color: ${props => props.theme.colors.colorA};
   }
 `

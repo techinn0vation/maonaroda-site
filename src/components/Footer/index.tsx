@@ -1,19 +1,17 @@
 import { LogoBranding } from '../Navigation/styles'
 import Text from '../Text'
 import Logo from '..//..//..//public/img/Logo.png'
-import IMG_B009 from '..//..//..//public/img/IMG_B009.png'
 
 import { FiFacebook, FiInstagram } from 'react-icons/fi'
 import { AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai'
 
+import { useInView } from 'react-intersection-observer'
+
 import {
   BlockFooter,
-  CellSubFooter,
   ContentFooter,
   ContentTextCompany,
-  DownloadQrCode,
   IconsFields,
-  LinkCellFooter,
   LinkField,
   LinkIcon,
   RowBlock,
@@ -22,8 +20,10 @@ import {
 } from './styles'
 
 export default function Footer() {
+  const { ref, inView } = useInView()
+
   return (
-    <WrapperFooter>
+    <WrapperFooter ref={ref} inView={inView}>
       <ContentFooter>
         <BlockFooter>
           <RowBlock>
@@ -44,6 +44,19 @@ export default function Footer() {
         </BlockFooter>
         <BlockFooter>
           <LogoBranding src={Logo} alt="Mão na roda-Logo" />
+          <SubDescriptionFooter>
+            <LinkField href="/#">
+              <Text message="política de privacidade" />
+            </LinkField>
+            <LinkField href="/#">
+              <Text message="termos de uso" />
+            </LinkField>
+          </SubDescriptionFooter>
+        </BlockFooter>
+        <BlockFooter>
+          <RowBlock>
+            <Text message="siga-nos nas redes sociais" />
+          </RowBlock>
           <IconsFields>
             <LinkIcon href="/#">
               <FiFacebook />
@@ -58,20 +71,6 @@ export default function Footer() {
               <FiInstagram />
             </LinkIcon>
           </IconsFields>
-          <SubDescriptionFooter>
-            <LinkCellFooter href="/#">
-              <Text message="política de privacidade" />
-            </LinkCellFooter>
-            <LinkCellFooter href="/#">
-              <Text message="termos de uso" />
-            </LinkCellFooter>
-          </SubDescriptionFooter>
-        </BlockFooter>
-        <BlockFooter>
-          <DownloadQrCode src={IMG_B009} alt="" />
-          <CellSubFooter>
-            <Text message="faça o download do nosso aplicativo" />
-          </CellSubFooter>
         </BlockFooter>
       </ContentFooter>
       <ContentTextCompany>

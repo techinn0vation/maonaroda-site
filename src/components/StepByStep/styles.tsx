@@ -6,7 +6,14 @@ import {
   BsFillArrowRightSquareFill
 } from 'react-icons/bs'
 
-export const WrapperStepByStep = styled.section`
+interface Animation {
+  inView: boolean;
+}
+
+export const WrapperStepByStep =
+  styled.section <
+  Animation >
+  `
   width: 100%;
   min-width: 100vw;
   height: 100%;
@@ -17,6 +24,10 @@ export const WrapperStepByStep = styled.section`
   gap: 2rem;
   position: relative;
   background: ${props => props.theme.colors.colorF};
+
+  opacity: ${props => (props.inView ? 1 : 0)};
+  transform: translateX(${props => (props.inView ? 0 : '25rem')});
+  transition: opacity 0.66s, transform 0.66s;
 `
 export const HeadlineStepByStep = styled.div`
   width: 100%;
@@ -48,12 +59,6 @@ export const HeadlineStepByStep = styled.div`
   }
 
   @media (width >= ${props => props.theme.screenSize.sizeMD}) {
-    h1 {
-      font-size: 2.5rem;
-      line-height: 3.7rem;
-    }
-  }
-  @media (width >= ${props => props.theme.screenSize.sizeLG}) {
     h1 {
       font-size: 2.5rem;
       line-height: 3.7rem;

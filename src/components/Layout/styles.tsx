@@ -8,6 +8,7 @@ export const WrapperLayout = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 5rem;
   padding: 1.5rem 2rem 0;
+  overflow: hidden;
 `

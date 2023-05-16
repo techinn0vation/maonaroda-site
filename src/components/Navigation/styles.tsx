@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 import { HiMenuAlt1 } from 'react-icons/hi'
 import { IoClose } from 'react-icons/io5'
+import { FaUserAlt } from 'react-icons/fa'
 
 interface sideBar {
   isOpen: boolean;
@@ -103,11 +104,12 @@ export const DisplayLink = styled(Link)`
 
   &:nth-of-type(5) {
     width: 9rem;
-    padding: 0.2rem;
+    padding: 0.5rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
     text-transform: capitalize;
     background: ${props => props.theme.colors.colorE};
     color: ${props => props.theme.colors.colorC};
@@ -132,4 +134,8 @@ export const ButtonOpen = styled(HiMenuAlt1)`
 export const ButtonClose = styled(IoClose)`
   font-size: 2.4rem;
   color: ${props => props.theme.colors.colorA};
+`
+export const IconLogin = styled(FaUserAlt)`
+  font-size: 1.4rem;
+  color: ${props => props.theme.colors.colorC};
 `

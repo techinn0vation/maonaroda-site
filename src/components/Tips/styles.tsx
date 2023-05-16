@@ -1,13 +1,24 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 
-export const WrapperTips = styled.section`
+interface Animation {
+  inView: boolean;
+}
+
+export const WrapperTips =
+  styled.section <
+  Animation >
+  `
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 3rem;
+
+  opacity: ${props => (props.inView ? 1 : 0)};
+  transform: translateX(${props => (props.inView ? 0 : '25rem')});
+  transition: opacity 0.66s, transform 0.66s;
 `
 export const HeadlineTips = styled.div`
   width: 100%;
@@ -39,12 +50,6 @@ export const HeadlineTips = styled.div`
   }
 
   @media (width >= ${props => props.theme.screenSize.sizeMD}) {
-    h1 {
-      font-size: 2.5rem;
-      line-height: 3.7rem;
-    }
-  }
-  @media (width >= ${props => props.theme.screenSize.sizeLG}) {
     h1 {
       font-size: 2.5rem;
       line-height: 3.7rem;
@@ -129,8 +134,8 @@ export const DescriptionTips = styled.div`
     &:nth-child(2) {
       color: ${props => props.theme.colors.colorG};
       font-size: 1.4rem;
-      font-weight: 500;
       line-height: 2.1rem;
+      font-weight: 500;
     }
   }
 `

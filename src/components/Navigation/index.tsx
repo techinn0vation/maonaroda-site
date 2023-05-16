@@ -9,7 +9,8 @@ import {
   WrapperNavigation,
   WrapperSidebar,
   ContentButtons,
-  LogoBranding
+  LogoBranding,
+  IconLogin
 } from './styles'
 
 export default function Navigation() {
@@ -30,7 +31,10 @@ export default function Navigation() {
           <DisplayLink href="/">blog</DisplayLink>
           <DisplayLink href="/">sobre nós</DisplayLink>
           <DisplayLink href="/">solicitar serviços</DisplayLink>
-          <DisplayLink href="/">login</DisplayLink>
+          <DisplayLink href="/">
+            <IconLogin />
+            login
+          </DisplayLink>
         </ContentLinks>
       </WrapperSidebar>
     </WrapperNavigation>

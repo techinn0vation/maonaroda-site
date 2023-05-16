@@ -1,17 +1,29 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 
-export const WrapperAboutUs = styled.section`
+interface Animation {
+  inView: boolean;
+}
+
+export const WrapperAboutUs =
+  styled.section <
+  Animation >
+  `
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  opacity: ${props => (props.inView ? 1 : 0)};
+  transform: translateX(${props => (props.inView ? 0 : '25rem')});
+  transition: opacity 0.66s, transform 0.66s;
+
   @media (width >= ${props => props.theme.screenSize.sizeMD}) {
     max-width: 63rem;
     margin: 0 auto;
   }
+
 `
 export const HeadlineAboutUs = styled.div`
   width: 100%;
@@ -63,9 +75,9 @@ export const ButtonAboutUs = styled(Link)`
   p {
     color: ${props => props.theme.colors.colorC};
     font-size: 1.4rem;
+    line-height: 2.1rem;
     font-style: normal;
     font-weight: 600;
-    line-height: 2.1rem;
     &::first-letter {
       text-transform: capitalize;
     }

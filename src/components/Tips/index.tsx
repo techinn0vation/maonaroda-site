@@ -1,5 +1,6 @@
 import Text from '../Text'
 import Title from '../Title'
+import { useInView } from 'react-intersection-observer'
 
 import IMG_B003 from '..//..//..//public/img/IMG_B002.png'
 
@@ -26,8 +27,10 @@ const references = [
 ]
 
 export default function Tips() {
+  const { ref, inView } = useInView()
+
   return (
-    <WrapperTips>
+    <WrapperTips ref={ref} inView={inView}>
       <HeadlineTips>
         <Title title="confira nosso blog com boas dicas para o seu dia a dia" />
         <Text message="lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam." />

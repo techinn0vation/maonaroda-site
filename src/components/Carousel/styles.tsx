@@ -73,15 +73,16 @@ export const WrapperIndicators = styled.div`
   }
 `
 export const DisplayIndicators = styled.input`
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
-
+  opacity: 0.5;
   appearance: none;
   background: ${props => props.theme.colors.colorE};
 
   &:focus {
     outline: solid 0.1rem ${props => props.theme.colors.colorE};
     outline-offset: 0.3rem;
+    opacity: 1;
   }
 `

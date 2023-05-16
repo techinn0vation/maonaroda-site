@@ -1,3 +1,9 @@
+import Title from '../Title'
+import Text from '../Text'
+import { useInView } from 'react-intersection-observer'
+
+import IMG_B005 from '..//..//..//public/img/IMG_B005.png'
+
 import {
   BlockProfissional,
   ButtonAccess,
@@ -8,13 +14,11 @@ import {
   WrapperProfissional
 } from './styles'
 
-import IMG_B005 from '..//..//..//public/img/IMG_B005.png'
-import Title from '../Title'
-import Text from '../Text'
-
 export default function Profissional() {
+  const { ref, inView } = useInView()
+
   return (
-    <WrapperProfissional>
+    <WrapperProfissional ref={ref} inView={inView}>
       <ContentProfissional>
         <WrapperFrameProfissional>
           <FrameProfissional src={IMG_B005} alt="" />

@@ -3,7 +3,14 @@ import Image from 'next/image'
 
 import { BsFillArrowDownCircleFill } from 'react-icons/bs'
 
-export const WrapperHero = styled.header`
+interface Animation {
+  inView: boolean;
+}
+
+export const WrapperHero =
+  styled.header <
+  Animation >
+  `
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -11,16 +18,9 @@ export const WrapperHero = styled.header`
   align-items: center;
   gap: 3rem;
 
-  animation: heroAnim 0.4s ease 0s 1 normal forwards;
-  @keyframes heroAnim {
-    0% {
-      transform: scaleX(0);
-    }
-
-    100% {
-      transform: scaleX(1);
-    }
-  }
+  opacity: ${props => (props.inView ? 1 : 0)};
+  transform: translateX(${props => (props.inView ? 0 : '25rem')});
+  transition: opacity 0.66s, transform 0.66s;
 `
 export const BlockHero = styled.div`
   width: 100%;

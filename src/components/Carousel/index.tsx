@@ -1,5 +1,13 @@
 import Text from '../Text'
 
+import SVG_B007 from '..//..//assets/svg/SVG_B007.svg'
+import SVG_B008 from '..//..//assets/svg/SVG_B008.svg'
+import SVG_B009 from '..//..//assets/svg/SVG_B009.svg'
+import SVG_B010 from '..//..//assets/svg/SVG_B010.svg'
+import SVG_B011 from '..//..//assets/svg/SVG_B011.svg'
+import SVG_B012 from '..//..//assets/svg/SVG_B012.svg'
+import SVG_B013 from '..//..//assets/svg/SVG_B013.svg'
+
 import {
   WrapperAssets,
   BlockAssets,
@@ -8,14 +16,6 @@ import {
   WrapperIndicators,
   DisplayIndicators
 } from './styles'
-
-import SVG_B007 from '..//..//assets/svg/SVG_B007.svg'
-import SVG_B008 from '..//..//assets/svg/SVG_B008.svg'
-import SVG_B009 from '..//..//assets/svg/SVG_B009.svg'
-import SVG_B010 from '..//..//assets/svg/SVG_B010.svg'
-import SVG_B011 from '..//..//assets/svg/SVG_B011.svg'
-import SVG_B012 from '..//..//assets/svg/SVG_B012.svg'
-import SVG_B013 from '..//..//assets/svg/SVG_B013.svg'
 
 export default function Carousel() {
   const handleClick = (id: string) => {

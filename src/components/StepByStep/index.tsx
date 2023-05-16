@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Text from '../Text'
 import Title from '../Title'
 
+import { useInView } from 'react-intersection-observer'
+
 import IMG_B003 from '..//..//..//public/img/IMG_B003.png'
 import IMG_B006 from '..//..//..//public/img/IMG_B006.png'
 import IMG_B007 from '..//..//..//public/img/IMG_B007.png'
@@ -20,6 +22,8 @@ import {
 } from './styles'
 
 export default function StepByStep() {
+  const { ref, inView } = useInView()
+
   const [scrollableClass, setScrollableClass] = useState('scrollable-content')
 
   const scrollToNextImage = (direction: 'left' | 'right') => {
@@ -38,7 +42,7 @@ export default function StepByStep() {
   }
 
   return (
-    <WrapperStepByStep>
+    <WrapperStepByStep ref={ref} inView={inView}>
       <HeadlineStepByStep>
         <Title title="como funciona?" />
         <Text message="exemplo: cliente" />

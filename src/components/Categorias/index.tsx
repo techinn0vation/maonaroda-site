@@ -1,4 +1,6 @@
 import Title from '../Title'
+import { DisplayIndicators, WrapperIndicators } from '../Carousel/styles'
+import { useInView } from 'react-intersection-observer'
 
 import SVG_B001 from '..//..//assets/svg/SVG_B001.svg'
 import SVG_B002 from '..//..//assets/svg/SVG_B002.svg'
@@ -15,9 +17,10 @@ import {
   NameCategoria,
   WrapperCategorias
 } from './styles'
-import { DisplayIndicators, WrapperIndicators } from '../Carousel/styles'
 
 export default function Categorias() {
+  const { ref, inView } = useInView()
+
   const handleClick = (id: string) => {
     const slideElement: HTMLElement | null = document.getElementById(id)
     if (slideElement !== null) {
@@ -29,7 +32,7 @@ export default function Categorias() {
   }
 
   return (
-    <WrapperCategorias>
+    <WrapperCategorias ref={ref} inView={inView}>
       <HeadlineCategorias>
         <Title title="categorias em destaques" />
       </HeadlineCategorias>

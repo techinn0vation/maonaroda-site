@@ -3,6 +3,8 @@ import Title from '../Title'
 import IMG_B003 from '..//..//..//public/img/IMG_B003.png'
 import IMG_B004 from '..//..//..//public/img/IMG_B004.png'
 
+import { useInView } from 'react-intersection-observer'
+
 import {
   BlockBanner,
   BlockFrameBanner,
@@ -21,8 +23,10 @@ import {
 import Text from '../Text'
 
 export default function Banner() {
+  const { ref, inView } = useInView()
+
   return (
-    <WrapperBanner>
+    <WrapperBanner ref={ref} inView={inView}>
       <BlockBanner>
         <ContentBanner>
           <HeadlineBanner>

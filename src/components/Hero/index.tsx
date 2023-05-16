@@ -1,5 +1,7 @@
 import Text from '../Text'
 import Title from '../Title'
+import Carousel from '../Carousel'
+import { useInView } from 'react-intersection-observer'
 
 import IMG_B001 from '..//..//..//public/img/IMG_B001.png'
 
@@ -17,11 +19,12 @@ import {
   TextMark,
   WrapperHero
 } from './styles'
-import Carousel from '../Carousel'
 
 export default function Hero() {
+  const { ref, inView } = useInView()
+
   return (
-    <WrapperHero>
+    <WrapperHero ref={ref} inView={inView}>
       <BlockHero>
         <ContentHero>
           <HeadlineHero>

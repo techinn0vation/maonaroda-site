@@ -2,12 +2,23 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styled from 'styled-components'
 
-export const WrapperProfissional = styled.section`
+interface Animation {
+  inView: boolean;
+}
+
+export const WrapperProfissional =
+  styled.section <
+  Animation >
+  `
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  opacity: ${props => (props.inView ? 1 : 0)};
+  transform: translateX(${props => (props.inView ? 0 : '-25rem')});
+  transition: opacity 0.66s, transform 0.66s;
 `
 export const ContentProfissional = styled.div`
   width: 100%;
