@@ -28,7 +28,6 @@ export default function Navigation() {
         </ContentButtons>
         <ContentLinks isOpen={isOpen}>
           <DisplayLink href="/">home</DisplayLink>
-          <DisplayLink href="/">blog</DisplayLink>
           <DisplayLink href="/">sobre nós</DisplayLink>
           <DisplayLink href="/">solicitar serviços</DisplayLink>
           <DisplayLink href="/">

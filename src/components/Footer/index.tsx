@@ -35,9 +35,11 @@ export default function Footer() {
           <LinkField href="/#">
             <Text message="categorias" />
           </LinkField>
+          {/* ===== OUT-OF-ORDER ===== */}
           <LinkField href="/#">
             <Text message="blog" />
           </LinkField>
+          {/* ===== OUT-OF-ORDER ===== */}
           <LinkField href="/#">
             <Text message="trabalhe conosco" />
           </LinkField>
@@ -61,13 +63,13 @@ export default function Footer() {
             <LinkIcon href="/#">
               <FiFacebook />
             </LinkIcon>
-            <LinkIcon href="/#">
+            <LinkIcon href="mailto:contato@mao-na-roda.com">
               <AiOutlineMail />
             </LinkIcon>
-            <LinkIcon href="/#">
+            <LinkIcon href="https://api.whatsapp.com/send?phone=551135440550">
               <AiOutlineWhatsApp />
             </LinkIcon>
-            <LinkIcon href="/#">
+            <LinkIcon href="https://www.instagram.com/maonaroda_oficiall/">
               <FiInstagram />
             </LinkIcon>
           </IconsFields>

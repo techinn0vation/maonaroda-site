@@ -25,7 +25,7 @@ export const WrapperCategorias =
   }
 
   opacity: ${props => (props.inView ? 1 : 0)};
-  transform: translateX(${props => (props.inView ? 0 : '-25rem')});
+  transform: translateX(${props => (props.inView ? 0 : '25rem')});
   transition: opacity 0.66s, transform 0.66s;
 `
 export const HeadlineCategorias = styled.div`
@@ -83,6 +83,7 @@ export const BlockCategoria = styled.div`
   padding: 1rem;
   border: solid ${props => props.theme.colors.colorB} 0.2rem;
   border-radius: 0 1rem 1rem;
+  cursor: pointer;
 
   @media (width >= ${props => props.theme.screenSize.sizeLG}) {
     transition: transform 0.25s ease;

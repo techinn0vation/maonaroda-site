@@ -102,7 +102,7 @@ export const DisplayLink = styled(Link)`
     }
   }
 
-  &:nth-of-type(5) {
+  &:nth-of-type(4) {
     width: 9rem;
     padding: 0.5rem;
     display: flex;

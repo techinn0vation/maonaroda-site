@@ -12,6 +12,7 @@ export const WrapperHero =
   Animation >
   `
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +20,7 @@ export const WrapperHero =
   gap: 3rem;
 
   opacity: ${props => (props.inView ? 1 : 0)};
-  transform: translateX(${props => (props.inView ? 0 : '25rem')});
+  transform: translateX(${props => (props.inView ? 0 : '-25rem')});
   transition: opacity 0.66s, transform 0.66s;
 `
 export const BlockHero = styled.div`
