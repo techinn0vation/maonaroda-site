@@ -66,7 +66,7 @@ export default function Footer() {
             <LinkIcon href="mailto:contato@mao-na-roda.com">
               <AiOutlineMail />
             </LinkIcon>
-            <LinkIcon href="https://api.whatsapp.com/send?phone=551135440550">
+            <LinkIcon href="https://wa.me/5541996108063">
               <AiOutlineWhatsApp />
             </LinkIcon>
             <LinkIcon href="https://www.instagram.com/maonaroda_oficiall/">
