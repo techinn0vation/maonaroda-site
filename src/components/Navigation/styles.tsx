@@ -113,10 +113,16 @@ export const DisplayLink = styled(Link)`
     text-transform: capitalize;
     background: ${props => props.theme.colors.colorE};
     color: ${props => props.theme.colors.colorC};
-    border-radius: 1.5rem;
+    border-radius: 1rem;
+    transition: ease-in 0.1s all;
 
     &:hover::after {
       background: transparent;
+    }
+    &:hover {
+      outline-offset: 0.2rem;
+      transition: ease-in 0.1s all;
+      outline: solid ${props => props.theme.colors.colorE} 0.2rem;
     }
   }
 `

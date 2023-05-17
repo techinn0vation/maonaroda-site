@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Link from 'next/link'
 import Image from 'next/image'
 
 import { BsApple } from 'react-icons/bs'
@@ -121,7 +122,7 @@ export const WrapperStore = styled.div`
   align-items: center;
   gap: 1rem;
 `
-export const BlockStore = styled.div`
+export const BlockStore = styled(Link)`
   width: 100%;
   border: solid ${props => props.theme.colors.colorC} 0.1rem;
   border-radius: 1rem;
@@ -131,6 +132,13 @@ export const BlockStore = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: ease-in 0.03s;
+  &:active {
+    transform: translateY(0.2rem);
+  }
 `
 export const IconGoogleStore = styled(IoLogoGooglePlaystore)`
   color: ${props => props.theme.colors.colorC};

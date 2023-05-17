@@ -2,6 +2,7 @@ import Text from '../Text'
 import Title from '../Title'
 import Carousel from '../Carousel'
 import { useInView } from 'react-intersection-observer'
+import { Link } from 'react-scroll'
 
 import IMG_B001 from '..//..//..//public/img/IMG_B001.png'
 
@@ -34,10 +35,19 @@ export default function Hero() {
             <Text message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis vel velit ut faucibus. Nam interdum tellus id nunc hendrerit efficitur. Cras auctor eros quam, per conubia nostra, per inceptos himenaeos." />
             <Text message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis vel velit ut faucibus. Nam interdum tellus id nunc hendrerit efficitur. Cras auctor eros quam, per conubia nostra, per inceptos himenaeos." />
           </SubHeadlineHero>
-          <ButtonDownload>
-            <Text message="baixe grátis agora mesmo!" />
-            <BsArrowIcon />
-          </ButtonDownload>
+          <Link
+            activeClass="active"
+            to="banner"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={2400}
+          >
+            <ButtonDownload>
+              <Text message="baixe grátis agora mesmo!" />
+              <BsArrowIcon />
+            </ButtonDownload>
+          </Link>
           <SubHeadlineHero>
             <DisplayMark>
               <TextMark>° 2 mil empreendedores</TextMark> em todo o estado,
@@ -48,7 +58,7 @@ export default function Hero() {
         <ContentHero>
           <ContentFrame>
             <FrameFloating />
-            <BackgroundFrame src={IMG_B001} alt="Image work" />
+            <BackgroundFrame src={IMG_B001} alt="Imagem serviço" />
             <FrameFloating />
           </ContentFrame>
         </ContentHero>

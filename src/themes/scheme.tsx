@@ -1,1 +1,1 @@
-export const globalBackground = 'white'
+export const globalBackground = '#FFFFFF'
