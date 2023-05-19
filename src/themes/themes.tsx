@@ -6,7 +6,7 @@ export const theme = {
     colorD: '#212121',
     colorE: '#623CEA',
     colorF: '#F5F5F5',
-    colorG: '#E0E0E0',
+    colorG: '#F0F0F0',
     colorH: '#25D366',
     colorI: '#E4405F'
   },

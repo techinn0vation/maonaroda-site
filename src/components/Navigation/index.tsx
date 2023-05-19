@@ -30,7 +30,7 @@ export default function Navigation() {
           <DisplayLink href="/">home</DisplayLink>
           <DisplayLink href="/sobre">sobre nós</DisplayLink>
           <DisplayLink href="/solicitar">solicitar serviços</DisplayLink>
-          <DisplayLink href="/">
+          <DisplayLink href="/login">
             <IconLogin />
             login
           </DisplayLink>
