@@ -88,11 +88,12 @@ export const SubHeadlineProfissional = styled.div`
   }
 
   p {
-    color: ${props => props.theme.colors.colorG};
+    color: ${props => props.theme.colors.colorA};
     font-style: normal;
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 2.1rem;
+    opacity: 0.88;
     &::first-letter {
       text-transform: capitalize;
     }

@@ -23,7 +23,6 @@ export const WrapperAboutUs =
     max-width: 63rem;
     margin: 0 auto;
   }
-
 `
 export const HeadlineAboutUs = styled.div`
   width: 100%;
@@ -44,11 +43,12 @@ export const HeadlineAboutUs = styled.div`
   }
 
   p {
-    color: ${props => props.theme.colors.colorG};
+    color: ${props => props.theme.colors.colorA};
     font-style: normal;
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 2.1rem;
+    opacity: 0.88;
     &::first-letter {
       text-transform: capitalize;
     }
@@ -63,31 +63,36 @@ export const HeadlineAboutUs = styled.div`
 `
 export const ButtonAboutUs = styled(Link)`
   width: 100%;
-  max-width: 20rem;
+  max-width: 25.5rem;
+  margin: 0 auto;
   padding: 1.6rem;
+  border-radius: 1.4rem;
   background: ${props => props.theme.colors.colorB};
-  border-radius: 1.3rem;
+  text-decoration: none;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
+  box-shadow: 0 0 0.5rem 0 ${props => props.theme.colors.colorB};
 
   p {
-    color: ${props => props.theme.colors.colorC};
-    font-size: 1.4rem;
-    line-height: 2.1rem;
     font-style: normal;
     font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    color: ${props => props.theme.colors.colorC};
     &::first-letter {
       text-transform: capitalize;
     }
   }
 
-  text-decoration: none;
   outline-offset: 0.2rem;
-  transition: ease-in 0.09s;
+
+  transition: ease-in 0.02s;
   &:focus:active {
     transform: translateY(0.2rem);
-    outline: solid ${props => props.theme.colors.colorE} 0.2rem;
+    outline: solid ${props => props.theme.colors.colorB} 0.2rem;
   }
 `

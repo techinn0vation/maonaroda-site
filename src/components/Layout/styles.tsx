@@ -9,7 +9,7 @@ export const WrapperLayout = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
+  gap: 3rem;
   padding: 1.5rem 2rem 0;
   overflow: hidden;
   scroll-behavior: smooth;

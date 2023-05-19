@@ -28,20 +28,20 @@ export default function Banner() {
       <BlockBanner>
         <ContentBanner>
           <HeadlineBanner>
-            <Title title="faça o download do nosso aplicativo" />
+            <Title message="faça o download do nosso aplicativo" />
           </HeadlineBanner>
           <WrapperStore>
             <BlockStore href="https://play.google.com/store/apps/details?id=com.klirineu.maonaroda2">
               <IconGoogleStore />
               <BlockTextStore>
-                <Title title="disponível na" />
+                <Title message="disponível na" />
                 <Text message="google play" />
               </BlockTextStore>
             </BlockStore>
             <BlockStore href="https://apps.apple.com/br/app/m%C3%A3o-na-roda-servi%C3%A7os/id6447600628">
               <IconAppStore />
               <BlockTextStore>
-                <Title title="disponível na" />
+                <Title message="disponível na" />
                 <Text message="app store" />
               </BlockTextStore>
             </BlockStore>

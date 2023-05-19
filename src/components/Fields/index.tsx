@@ -9,15 +9,15 @@ import SVG_B012 from '..//..//assets/svg/SVG_B012.svg'
 import SVG_B013 from '..//..//assets/svg/SVG_B013.svg'
 
 import {
-  WrapperAssets,
-  BlockAssets,
-  FrameAssets,
-  ContentAssets,
+  BlockSlide,
+  ContentSlide,
+  DisplayIndicators,
+  FrameSlideImage,
   WrapperIndicators,
-  DisplayIndicators
+  WrapperSlide
 } from './styles'
 
-export default function Carousel() {
+export default function Fields() {
   const handleClick = (id: string) => {
     const slideElement: HTMLElement | null = document.getElementById(id)
     if (slideElement !== null) {
@@ -27,83 +27,68 @@ export default function Carousel() {
         ?.scrollTo({ left: slidePosition, behavior: 'smooth' })
     }
   }
-
   return (
-    <WrapperAssets>
-      <ContentAssets id="content-assets">
-        <BlockAssets id="slide-1">
-          <FrameAssets src={SVG_B007} alt="Linkedin" />
+    <WrapperSlide>
+      <ContentSlide id="content-assets">
+        <BlockSlide id="slide-1">
+          <FrameSlideImage src={SVG_B007} alt="Linkedin" />
           <Text message="linkedin" />
-        </BlockAssets>
-        <BlockAssets id="slide-2">
-          <FrameAssets src={SVG_B008} alt="Twitter" />
+        </BlockSlide>
+        <BlockSlide>
+          <FrameSlideImage src={SVG_B008} alt="Twitter" />
           <Text message="twitter" />
-        </BlockAssets>
-        <BlockAssets id="slide-3">
-          <FrameAssets src={SVG_B009} alt="github" />
+        </BlockSlide>
+        <BlockSlide id="slide-2">
+          <FrameSlideImage src={SVG_B009} alt="github" />
           <Text message="github" />
-        </BlockAssets>
-        <BlockAssets id="slide-4">
-          <FrameAssets src={SVG_B010} alt="blogger" />
+        </BlockSlide>
+        <BlockSlide>
+          <FrameSlideImage src={SVG_B010} alt="blogger" />
           <Text message="blogger" />
-        </BlockAssets>
-        <BlockAssets id="slide-5">
-          <FrameAssets src={SVG_B011} alt="google" />
+        </BlockSlide>
+        <BlockSlide id="slide-3">
+          <FrameSlideImage src={SVG_B011} alt="google" />
           <Text message="google" />
-        </BlockAssets>
-        <BlockAssets id="slide-6">
-          <FrameAssets src={SVG_B012} alt="visa" />
+        </BlockSlide>
+        <BlockSlide>
+          <FrameSlideImage src={SVG_B012} alt="visa" />
           <Text message="visa" />
-        </BlockAssets>
-        <BlockAssets id="slide-7">
-          <FrameAssets src={SVG_B013} alt="mastercard" />
+        </BlockSlide>
+        <BlockSlide id="slide-4">
+          <FrameSlideImage src={SVG_B013} alt="mastercard" />
           <Text message="mastercard" />
-        </BlockAssets>
-      </ContentAssets>
+        </BlockSlide>
+      </ContentSlide>
       <WrapperIndicators>
         <DisplayIndicators
           type="radio"
+          id="slide-1"
           onClick={() => {
             handleClick('slide-1')
           }}
         />
         <DisplayIndicators
           type="radio"
+          id="slide-2"
           onClick={() => {
             handleClick('slide-2')
           }}
         />
         <DisplayIndicators
           type="radio"
+          id="slide-3"
           onClick={() => {
             handleClick('slide-3')
           }}
         />
         <DisplayIndicators
           type="radio"
+          id="slide-4"
           onClick={() => {
             handleClick('slide-4')
           }}
         />
-        <DisplayIndicators
-          type="radio"
-          onClick={() => {
-            handleClick('slide-5')
-          }}
-        />
-        <DisplayIndicators
-          type="radio"
-          onClick={() => {
-            handleClick('slide-6')
-          }}
-        />
-        <DisplayIndicators
-          type="radio"
-          onClick={() => {
-            handleClick('slide-7')
-          }}
-        />
       </WrapperIndicators>
-    </WrapperAssets>
+    </WrapperSlide>
   )
 }

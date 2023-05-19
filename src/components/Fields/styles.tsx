@@ -1,22 +1,23 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 
-export const WrapperAssets = styled.div`
+export const WrapperSlide = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 `
-export const ContentAssets = styled.div`
+export const ContentSlide = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
-
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -24,41 +25,29 @@ export const ContentAssets = styled.div`
   &::-webkit-scrollbar {
     width: 0;
   }
-
-  @media (width > ${props => props.theme.screenSize.sizeLG}) {
-    overflow: hidden;
-  }
 `
-
-export const BlockAssets = styled.div`
+export const BlockSlide = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  padding: 0.5rem;
+  gap: 2rem;
   cursor: default;
 
   p {
     font-style: normal;
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
     text-transform: uppercase;
     color: ${props => props.theme.colors.colorB};
   }
-
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
-    flex-direction: column;
-  }
-  @media (width >= ${props => props.theme.screenSize.sizeLG}) {
-    flex-direction: row;
-  }
 `
-export const FrameAssets = styled(Image)`
-  width: 3.2rem;
-  display: block;
+export const FrameSlideImage = styled(Image)`
+  width: 3.8rem;
+  object-fit: fill;
+  margin: 0;
 `
 export const WrapperIndicators = styled.div`
   width: 100%;
@@ -69,7 +58,7 @@ export const WrapperIndicators = styled.div`
   gap: 1rem;
 
   @media (width >= ${props => props.theme.screenSize.sizeLG}) {
-    display: none;
+    /* display: none; */
   }
 `
 export const DisplayIndicators = styled.input`

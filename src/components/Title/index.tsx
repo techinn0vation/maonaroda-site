@@ -1,9 +1,9 @@
 import { DisplayTitle } from './styles'
 
 interface PropTitle {
-  title: string;
+  message: string
 }
 
 export default function Title(props: PropTitle) {
-  return <DisplayTitle>{props.title}</DisplayTitle>
+  return <DisplayTitle>{props.message}</DisplayTitle>
 }

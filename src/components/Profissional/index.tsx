@@ -25,7 +25,7 @@ export default function Profissional() {
         </WrapperFrameProfissional>
         <BlockProfissional>
           <SubHeadlineProfissional>
-            <Title title="você é um profissional?" />
+            <Title message="você é um profissional?" />
             <Text message="centenas de solicitações por dia esperando por você" />
           </SubHeadlineProfissional>
           <ButtonAccess href="/#">

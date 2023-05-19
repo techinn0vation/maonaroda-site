@@ -1,7 +1,7 @@
 import { DisplayText } from './styles'
 
 interface PropText {
-  message: string;
+  message: string
 }
 
 export default function Text(props: PropText) {
