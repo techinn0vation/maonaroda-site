@@ -62,17 +62,16 @@ export const ContentLinks =
 `
 export const DisplayLink = styled(Link)`
   color: ${props => props.theme.colors.colorD};
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 600;
-  line-height: 2.4rem;
+  line-height: 2.1rem;
   &::first-letter {
     text-transform: capitalize;
   }
   text-decoration: none;
   cursor: pointer;
-  margin-left: 1rem;
-  padding: 0.5rem;
+  margin-left: 0.6rem;
   position: relative;
   &:hover {
     color: ${props => props.theme.colors.colorB};
