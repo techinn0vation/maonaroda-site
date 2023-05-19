@@ -1,73 +1,90 @@
-import { BlockSteps, ContentSteps, FrameSteps, WrapperSteps } from './styles'
+import React, { useState } from 'react'
+import Text from '../Text'
+import Title from '../Title'
+
+import { useInView } from 'react-intersection-observer'
 
 import IMG_B003 from '..//..//..//public/img/IMG_B003.png'
+import IMG_B006 from '..//..//..//public/img/IMG_B006.png'
 import IMG_B007 from '..//..//..//public/img/IMG_B007.png'
 import IMG_B008 from '..//..//..//public/img/IMG_B008.png'
 
-import Text from '../Text'
-import { WrapperIndicators, DisplayIndicators } from '../Fields/styles'
+import {
+  BlockStepByStep,
+  ContentStepByStep,
+  FrameStepByStep,
+  HeadlineStepByStep,
+  InformStepByStep,
+  ToggleLeft,
+  ToggleRight,
+  WrapperFrameStepByStep,
+  WrapperStepByStep
+} from './styles'
 
 export default function Steps() {
-  const handleClick = (id: string) => {
-    const slideElement: HTMLElement | null = document.getElementById(id)
-    if (slideElement !== null) {
-      const slidePosition = slideElement.offsetLeft
-      document
-        .getElementById('content-steps')
-        ?.scrollTo({ left: slidePosition, behavior: 'smooth' })
+  const { ref, inView } = useInView()
+
+  const [scrollableClass, setScrollableClass] = useState('scrollable-content')
+
+  const scrollToNextImage = (direction: 'left' | 'right') => {
+    const scrollContainer = document.getElementById('contentStepByStep')
+    if (scrollContainer != null) {
+      const scrollAmount =
+        direction === 'left'
+          ? -scrollContainer.offsetWidth
+          : scrollContainer.offsetWidth
+      scrollContainer.scrollLeft += scrollAmount
+      setScrollableClass('scrollable-content smooth-scroll')
+      setTimeout(() => {
+        setScrollableClass('scrollable-content')
+      }, 500)
     }
   }
 
   return (
-    <WrapperSteps>
-      <ContentSteps id="content-steps">
-        <BlockSteps id="slide-1">
-          <FrameSteps src={IMG_B003} alt="faça seu cadastro" />
-          <Text message="1&thinsp;: faça o seu cadastro" />
-        </BlockSteps>
-        <BlockSteps id="slide-2">
-          <FrameSteps src={IMG_B007} alt="selecione o serviço" />
-          <Text message="2&thinsp;: selecione o serviço desejado e confira os valores" />
-        </BlockSteps>
-        <BlockSteps id="slide-3">
-          <FrameSteps src={IMG_B008} alt="finalize o pagamento" />
-          <Text message="3&thinsp;: finalize o agendamento do serviço" />
-        </BlockSteps>
-        <BlockSteps id="slide-4">
-          <FrameSteps src={IMG_B008} alt="finalize o pagamento" />
-          <Text message="3&thinsp;: finalize o agendamento do serviço" />
-        </BlockSteps>
-      </ContentSteps>
-      <WrapperIndicators>
-        <DisplayIndicators
-          type="radio"
-          id="slide-1"
+    <WrapperStepByStep ref={ref} inView={inView}>
+      <HeadlineStepByStep>
+        <Title message="como funciona?" />
+        <Text message="exemplo: cliente" />
+      </HeadlineStepByStep>
+      <ContentStepByStep>
+        <ToggleLeft
           onClick={() => {
-            handleClick('slide-1')
+            scrollToNextImage('left')
           }}
         />
-        <DisplayIndicators
-          type="radio"
-          id="slide-2"
+        <BlockStepByStep id="contentStepByStep">
+          <WrapperFrameStepByStep>
+            <FrameStepByStep src={IMG_B003} alt="Faça o seu cadastro" />
+            <InformStepByStep>
+              <Text message="1: Faça o seu cadastro" />
+            </InformStepByStep>
+          </WrapperFrameStepByStep>
+          <WrapperFrameStepByStep>
+            <FrameStepByStep src={IMG_B006} alt="Selecione o serviço" />
+            <InformStepByStep>
+              <Text message="2: Selecione o serviço desejado e confira os valores" />
+            </InformStepByStep>
+          </WrapperFrameStepByStep>
+          <WrapperFrameStepByStep>
+            <FrameStepByStep src={IMG_B007} alt="Finalize o agendamento" />
+            <InformStepByStep>
+              <Text message="3: Finalize o agendamento do serviço" />
+            </InformStepByStep>
+          </WrapperFrameStepByStep>
+          <WrapperFrameStepByStep>
+            <FrameStepByStep src={IMG_B008} alt="Confirme o pagamento" />
+            <InformStepByStep>
+              <Text message="4:  Confirme seu endereço e aguarde um técnico" />
+            </InformStepByStep>
+          </WrapperFrameStepByStep>
+        </BlockStepByStep>
+        <ToggleRight
           onClick={() => {
-            handleClick('slide-2')
+            scrollToNextImage('right')
           }}
         />
-        <DisplayIndicators
-          type="radio"
-          id="slide-3"
-          onClick={() => {
-            handleClick('slide-3')
-          }}
-        />
-        <DisplayIndicators
-          type="radio"
-          id="slide-4"
-          onClick={() => {
-            handleClick('slide-4')
-          }}
-        />
-      </WrapperIndicators>
-    </WrapperSteps>
+      </ContentStepByStep>
+    </WrapperStepByStep>
   )
 }

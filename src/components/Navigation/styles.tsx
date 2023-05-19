@@ -40,7 +40,7 @@ export const ContentLinks =
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
   position: relative;
 
   @media (width <= ${props => props.theme.screenSize.sizeMD}) {
@@ -62,16 +62,17 @@ export const ContentLinks =
 `
 export const DisplayLink = styled(Link)`
   color: ${props => props.theme.colors.colorD};
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-style: normal;
   font-weight: 600;
-  line-height: 2.1rem;
+  line-height: 2.4rem;
   &::first-letter {
     text-transform: capitalize;
   }
   text-decoration: none;
   cursor: pointer;
   margin-left: 1rem;
+  padding: 0.5rem;
   position: relative;
   &:hover {
     color: ${props => props.theme.colors.colorB};

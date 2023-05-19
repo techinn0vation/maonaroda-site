@@ -7,10 +7,9 @@ export const WrapperLayout = styled.main`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 3rem;
   padding: 1.5rem 2rem 0;
   overflow: hidden;
-  scroll-behavior: smooth;
 `

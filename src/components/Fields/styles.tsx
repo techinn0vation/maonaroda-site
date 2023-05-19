@@ -10,6 +10,7 @@ export const WrapperSlide = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  padding: 0 0 5rem;
 `
 export const ContentSlide = styled.div`
   width: 100%;
@@ -33,6 +34,7 @@ export const BlockSlide = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  scroll-snap-align: start;
   cursor: default;
 
   p {
@@ -58,7 +60,7 @@ export const WrapperIndicators = styled.div`
   gap: 1rem;
 
   @media (width >= ${props => props.theme.screenSize.sizeLG}) {
-    /* display: none; */
+    display: none;
   }
 `
 export const DisplayIndicators = styled.input`

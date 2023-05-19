@@ -194,4 +194,6 @@ export const ImageFrameBanner = styled(Image)`
   height: auto;
   object-fit: contain;
   border-radius: 1.5rem;
+  box-shadow: 0 0 0.9rem 0 rgba(0, 0, 0, 0.1);
+  border: solid ${props => props.theme.colors.colorF} 0.02rem;
 `
