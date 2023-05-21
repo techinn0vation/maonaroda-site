@@ -21,7 +21,7 @@ export const WrapperNavigation = styled.nav`
 export const LogoBranding = styled(Image)`
   width: 100%;
   max-width: 10rem;
-  height: 6rem;
+  height: auto;
   display: block;
   margin: 0;
 `

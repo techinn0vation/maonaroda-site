@@ -55,7 +55,11 @@ export default function Hero() {
         </BlockHero>
         <BlockHero>
           <HeroFrame>
-            <BackgroundFrame src={IMG_B001} alt="Image serviço" />
+            <BackgroundFrame
+              src={IMG_B001}
+              alt="Image serviço"
+              priority={true}
+            />
             <FrameFloating />
             <FrameFloating />
           </HeroFrame>

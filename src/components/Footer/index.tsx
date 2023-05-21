@@ -45,7 +45,7 @@ export default function Footer() {
           </LinkField>
         </BlockFooter>
         <BlockFooter>
-          <LogoBranding src={Logo} alt="Mão na roda-Logo" />
+          <LogoBranding src={Logo} alt="Mão na roda-Logo" priority={true} />
           <SubDescriptionFooter>
             <LinkField href="/#">
               <Text message="política de privacidade" />

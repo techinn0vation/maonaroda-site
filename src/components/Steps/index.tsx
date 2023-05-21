@@ -55,25 +55,41 @@ export default function Steps() {
         />
         <BlockStepByStep id="contentStepByStep">
           <WrapperFrameStepByStep>
-            <FrameStepByStep src={IMG_B003} alt="Faça o seu cadastro" />
+            <FrameStepByStep
+              src={IMG_B003}
+              alt="Faça o seu cadastro"
+              priority={true}
+            />
             <InformStepByStep>
               <Text message="1: Faça o seu cadastro" />
             </InformStepByStep>
           </WrapperFrameStepByStep>
           <WrapperFrameStepByStep>
-            <FrameStepByStep src={IMG_B006} alt="Selecione o serviço" />
+            <FrameStepByStep
+              src={IMG_B006}
+              alt="Selecione o serviço"
+              priority={true}
+            />
             <InformStepByStep>
               <Text message="2: Selecione o serviço desejado e confira os valores" />
             </InformStepByStep>
           </WrapperFrameStepByStep>
           <WrapperFrameStepByStep>
-            <FrameStepByStep src={IMG_B007} alt="Finalize o agendamento" />
+            <FrameStepByStep
+              src={IMG_B007}
+              alt="Finalize o agendamento"
+              priority={true}
+            />
             <InformStepByStep>
               <Text message="3: Finalize o agendamento do serviço" />
             </InformStepByStep>
           </WrapperFrameStepByStep>
           <WrapperFrameStepByStep>
-            <FrameStepByStep src={IMG_B008} alt="Confirme o pagamento" />
+            <FrameStepByStep
+              src={IMG_B008}
+              alt="Confirme o pagamento"
+              priority={true}
+            />
             <InformStepByStep>
               <Text message="4:  Confirme seu endereço e aguarde um técnico" />
             </InformStepByStep>

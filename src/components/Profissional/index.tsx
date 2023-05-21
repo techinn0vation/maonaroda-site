@@ -21,7 +21,11 @@ export default function Profissional() {
     <WrapperProfissional ref={ref} inView={inView}>
       <ContentProfissional>
         <WrapperFrameProfissional>
-          <FrameProfissional src={IMG_B005} alt="" />
+          <FrameProfissional
+            src={IMG_B005}
+            alt="Profissional"
+            priority={true}
+          />
         </WrapperFrameProfissional>
         <BlockProfissional>
           <SubHeadlineProfissional>

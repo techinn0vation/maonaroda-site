@@ -21,7 +21,7 @@ export default function Navigation() {
   }
   return (
     <WrapperNavigation>
-      <LogoBranding src={Logo} alt="Mão na roda-Logo" />
+      <LogoBranding src={Logo} alt="Mão na roda-Logo" priority={true} />
       <WrapperSidebar>
         <ContentButtons onClick={triggerButton}>
           {isOpen ? <ButtonClose /> : <ButtonOpen />}

@@ -54,6 +54,7 @@ export const BlockSlide = styled.div`
 `
 export const FrameSlideImage = styled(Image)`
   width: 3.8rem;
+  height: auto;
   object-fit: fill;
   margin: 0;
 `

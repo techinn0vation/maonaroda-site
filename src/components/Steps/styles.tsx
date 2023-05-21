@@ -111,7 +111,7 @@ export const WrapperFrameStepByStep = styled.div`
 `
 export const FrameStepByStep = styled(Image)`
   width: auto;
-  height: 45rem;
+  height: auto;
   box-shadow: 0 0 0.9rem 0 rgba(0, 0, 0, 0.1);
   border-radius: 1.6rem;
   object-fit: contain;

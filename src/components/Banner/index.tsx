@@ -55,10 +55,18 @@ export default function Banner({ title, text }: BannerProps) {
         </ContentBanner>
         <WrapperFrameBanner>
           <BlockFrameBanner>
-            <ImageFrameBanner src={IMG_B003} alt="Cadastro de usuário app" />
+            <ImageFrameBanner
+              src={IMG_B003}
+              alt="Cadastro de usuário app"
+              priority={true}
+            />
           </BlockFrameBanner>
           <BlockFrameBanner>
-            <ImageFrameBanner src={IMG_B004} alt="Image agendamento app" />
+            <ImageFrameBanner
+              src={IMG_B004}
+              alt="Image agendamento app"
+              priority={true}
+            />
           </BlockFrameBanner>
         </WrapperFrameBanner>
       </BlockBanner>
