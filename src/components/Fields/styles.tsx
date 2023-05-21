@@ -26,6 +26,12 @@ export const ContentSlide = styled.div`
   &::-webkit-scrollbar {
     width: 0;
   }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
 `
 export const BlockSlide = styled.div`
   width: 100%;

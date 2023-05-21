@@ -191,9 +191,8 @@ export const BlockFrameBanner = styled.div`
 `
 export const ImageFrameBanner = styled(Image)`
   width: 100%;
-  display: none;
   height: auto;
-  object-fit: contain;
+  object-fit: fill;
   border-radius: 1.5rem;
   box-shadow: 0 0 0.9rem 0 rgba(0, 0, 0, 0.1);
   border: solid ${props => props.theme.colors.colorF} 0.02rem;

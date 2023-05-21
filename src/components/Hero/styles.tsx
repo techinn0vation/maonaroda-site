@@ -96,7 +96,7 @@ export const SubHeadlineHero = styled.div`
   }
 
   &::-webkit-scrollbar {
-    width: 0.3rem;
+    max-width: 0.2rem;
   }
   &::-webkit-scrollbar-track {
     background: ${props => props.theme.colors.colorF};
@@ -124,9 +124,8 @@ export const HeroFrame = styled.div`
 `
 export const BackgroundFrame = styled(Image)`
   width: 100%;
-  display: none;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
   box-shadow: 1rem -1rem 0 0 ${props => props.theme.colors.colorE};
 `
 export const FrameFloating = styled.div`
