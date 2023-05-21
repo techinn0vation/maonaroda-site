@@ -20,7 +20,12 @@ import {
   WrapperStore
 } from './styles'
 
-export default function Banner() {
+interface BannerProps {
+  title: string;
+  text: string;
+}
+
+export default function Banner({ title, text }: BannerProps) {
   const { ref, inView } = useInView()
 
   return (
@@ -28,7 +33,8 @@ export default function Banner() {
       <BlockBanner>
         <ContentBanner>
           <HeadlineBanner>
-            <Title message="faça o download do nosso aplicativo" />
+            <Title message={title} />
+            <Text message={text} />
           </HeadlineBanner>
           <WrapperStore>
             <BlockStore href="https://play.google.com/store/apps/details?id=com.klirineu.maonaroda2">

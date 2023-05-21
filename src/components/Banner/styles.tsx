@@ -78,7 +78,7 @@ export const HeadlineBanner = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   text-align: center;
 
   h1 {

@@ -1,7 +1,12 @@
+import Banner from '../Banner'
+import Text from '../Text'
 import Title from '../Title'
 
 import {
   BlockField,
+  ButtonLogin,
+  CheckField,
+  ContentCheckField,
   ContentFields,
   ContentLogin,
   HeadlineLogin,
@@ -31,7 +36,7 @@ export default function FormLogin() {
           <BlockField>
             <InputField
               placeholder="usuário"
-              name="usuario"
+              name="user"
               type="email"
               id="email"
             />
@@ -39,16 +44,27 @@ export default function FormLogin() {
           <BlockField>
             <InputField
               placeholder="senha"
-              name="senha"
-              type={showPassword ? 'text' : 'password'} // Alterna entre 'text' e 'password' com base no estado
-              id="senha"
+              name="password"
+              type={showPassword ? 'text' : 'password'}
+              id="password"
             />
+            <TogglePasswordButton onClick={handleTogglePassword}>
+              {showPassword ? <VisibleFill /> : <InvisibleFill />}
+            </TogglePasswordButton>
           </BlockField>
+          <ContentCheckField>
+            <CheckField type="checkbox" />
+            <Text message="permanecer conectado" />
+          </ContentCheckField>
         </ContentFields>
-        <TogglePasswordButton onClick={handleTogglePassword}>
-          {showPassword ? <VisibleFill /> : <InvisibleFill />}
-        </TogglePasswordButton>
+        <ButtonLogin href="/login">
+          <Text message="conectar" />
+        </ButtonLogin>
       </ContentLogin>
+      <Banner
+        title="não tem um login para se conectar?"
+        text="cadastre-se no app"
+      />
     </WrapperLogin>
   )
 }

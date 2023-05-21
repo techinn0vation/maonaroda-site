@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <Layout>
       <Hero />
-      <Banner />
+      <Banner title="faça o download do nosso aplicativo" text="" />
       <SobreNos />
       <Profissional />
       <Steps />

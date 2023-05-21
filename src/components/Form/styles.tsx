@@ -1,24 +1,28 @@
 import styled from 'styled-components'
 
-import { BsFillEyeFill, BsFillEyeSlashFill } from 'react-icons/bs'
+import { BsEye, BsEyeSlash } from 'react-icons/bs'
+import Link from 'next/link'
 
 export const WrapperLogin = styled.section`
   width: 100%;
-  display: gird;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: auto;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
 `
 export const ContentLogin = styled.div`
-  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+
+  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+    max-width: 50%;
+    margin: 0 auto;
+  }
 `
 export const BlockField = styled.div`
   width: 100%;
@@ -26,6 +30,10 @@ export const BlockField = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  &:nth-child(2) {
+    position: relative;
+  }
 `
 export const HeadlineLogin = styled.div`
   width: 100%;
@@ -87,7 +95,7 @@ export const InputField = styled.input`
   caret-color: ${props => props.theme.colors.colorB};
   padding: 1.6rem;
   outline: none;
-  border-radius: 1.2rem;
+  border-radius: 0.9rem;
   border-left: solid ${props => props.theme.colors.colorB} 2rem;
   animation: load 0.6s linear;
   transition: all 0.4s;
@@ -110,6 +118,101 @@ export const InputField = styled.input`
     opacity: 0.55;
   }
 `
-export const TogglePasswordButton = styled.div``
-export const VisibleFill = styled(BsFillEyeFill)``
-export const InvisibleFill = styled(BsFillEyeSlashFill)``
+export const TogglePasswordButton = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+`
+export const VisibleFill = styled(BsEye)`
+  font-size: 1.6rem;
+  color: ${props => props.theme.colors.colorB};
+`
+export const InvisibleFill = styled(BsEyeSlash)`
+  font-size: 1.6rem;
+  color: ${props => props.theme.colors.colorB};
+`
+export const ButtonLogin = styled(Link)`
+  width: 100%;
+  max-width: 20rem;
+  margin: 0 auto;
+  padding: 1.6rem;
+  border-radius: 1.4rem;
+  background: ${props => props.theme.colors.colorB};
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0 0 0.4rem 0 ${props => props.theme.colors.colorB};
+
+  p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    color: ${props => props.theme.colors.colorC};
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  outline-offset: 0.2rem;
+  text-decoration: none;
+  transition: ease-in 0.02s;
+  &:focus:active {
+    transform: translateY(0.2rem);
+    outline: solid ${props => props.theme.colors.colorE} 0.2rem;
+  }
+`
+export const ContentCheckField = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 0.5rem;
+
+  p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 2.1rem;
+    opacity: 0.55;
+    color: ${props => props.theme.colors.colorA};
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+`
+export const CheckField = styled.input`
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 0.1rem solid ${props => props.theme.colors.colorB};
+  border-radius: 0.5rem;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: all ease-in 0.2s;
+
+  &:checked {
+    background-color: ${props => props.theme.colors.colorB};
+  }
+
+  &:checked::before {
+    content: '✔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: ${props => props.theme.colors.colorF};
+    font-size: 1.2rem;
+  }
+`
