@@ -124,6 +124,7 @@ export const HeroFrame = styled.div`
 `
 export const BackgroundFrame = styled(Image)`
   width: 100%;
+  display: none;
   height: 100%;
   object-fit: cover;
   box-shadow: 1rem -1rem 0 0 ${props => props.theme.colors.colorE};

@@ -191,6 +191,7 @@ export const BlockFrameBanner = styled.div`
 `
 export const ImageFrameBanner = styled(Image)`
   width: 100%;
+  display: none;
   height: auto;
   object-fit: contain;
   border-radius: 1.5rem;
