@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import styled from 'styled-components'
+import Image from 'next/image'
 
 import { BsArrowDownCircleFill } from 'react-icons/bs'
 
@@ -23,6 +23,7 @@ export const WrapperHero =
   transform: translateZ(${props => (props.inView ? 0 : '25rem')});
   transition: opacity 0.66s, transform 0.66s;
 `
+
 export const ContentHero = styled.div`
   width: 100%;
   display: flex;
@@ -31,10 +32,11 @@ export const ContentHero = styled.div`
   align-items: flex-start;
   gap: 2rem;
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     flex-direction: row;
   }
 `
+
 export const BlockHero = styled.div`
   width: 100%;
   display: flex;
@@ -43,6 +45,7 @@ export const BlockHero = styled.div`
   align-items: flex-start;
   gap: 2rem;
 `
+
 export const HeadlineHero = styled.div`
   width: 100%;
   display: flex;
@@ -60,19 +63,21 @@ export const HeadlineHero = styled.div`
     text-transform: uppercase;
   }
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     h1 {
       font-size: 2.3rem;
       line-height: 3.45rem;
     }
   }
-  @media (width >= ${props => props.theme.screenSize.sizeLG}) {
+
+  @media (min-width: ${props => props.theme.screenSize.sizeLG}) {
     h1 {
       font-size: 3.4rem;
       line-height: 5.1rem;
     }
   }
 `
+
 export const SubHeadlineHero = styled.div`
   width: 100%;
   height: 10.5rem;
@@ -107,6 +112,7 @@ export const SubHeadlineHero = styled.div`
     border-radius: 1rem;
   }
 `
+
 export const HeroFrame = styled.div`
   width: 100%;
   height: auto;
@@ -117,17 +123,19 @@ export const HeroFrame = styled.div`
   padding: 1.5rem;
   position: relative;
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     justify-content: flex-start;
     align-items: flex-start;
   }
 `
+
 export const BackgroundFrame = styled(Image)`
   width: 100%;
   height: auto;
   object-fit: fill;
   box-shadow: 1rem -1rem 0 0 ${props => props.theme.colors.colorE};
 `
+
 export const FrameFloating = styled.div`
   width: 7rem;
   height: 5rem;
@@ -143,6 +151,7 @@ export const FrameFloating = styled.div`
     right: 0;
   }
 `
+
 export const ButtonHero = styled.button`
   width: 100%;
   max-width: 25.5rem;
@@ -177,6 +186,7 @@ export const ButtonHero = styled.button`
     outline: solid ${props => props.theme.colors.colorE} 0.2rem;
   }
 `
+
 export const BsArrowDown = styled(BsArrowDownCircleFill)`
   color: ${props => props.theme.colors.colorC};
   font-size: 1.6rem;
@@ -184,6 +194,7 @@ export const BsArrowDown = styled(BsArrowDownCircleFill)`
   border-radius: 100%;
   padding: 0.09rem;
 `
+
 export const RowIitalicizedText = styled.p`
   color: ${props => props.theme.colors.colorB};
   font-style: normal;
@@ -191,6 +202,7 @@ export const RowIitalicizedText = styled.p`
   font-size: 1.4rem;
   line-height: 2.1rem;
 `
+
 export const ItalicizedText = styled.span`
   font-weight: 600;
   margin-right: 0.3rem;
