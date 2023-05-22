@@ -32,7 +32,7 @@ export const WrapperBanner =
     top: 0;
   }
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     &::after {
       content: '';
       width: 100%;
@@ -59,7 +59,7 @@ export const BlockBanner = styled.div`
   gap: 3rem;
   z-index: 1;
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     flex-direction: row;
     padding: 0rem;
   }
@@ -101,13 +101,13 @@ export const HeadlineBanner = styled.div`
     }
   }
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     h1 {
       font-size: 2rem;
       line-height: 3rem;
     }
   }
-  @media (width >= ${props => props.theme.screenSize.sizeLG}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeLG}) {
     h1 {
       font-size: 2.5rem;
       line-height: 3.7rem;

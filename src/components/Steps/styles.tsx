@@ -59,7 +59,7 @@ export const HeadlineStepByStep = styled.div`
     opacity: 0.88;
   }
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     h1 {
       font-size: 2.5rem;
       line-height: 3.7rem;
@@ -76,7 +76,7 @@ export const ContentStepByStep = styled.div`
   z-index: 1;
   padding: 2rem;
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     max-width: 36rem;
     margin: 0 auto;
   }
@@ -116,7 +116,7 @@ export const FrameStepByStep = styled(Image)`
   border-radius: 1.6rem;
   object-fit: contain;
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     height: 45rem;
     object-fit: contain;
   }

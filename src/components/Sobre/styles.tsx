@@ -19,7 +19,7 @@ export const WrapperAboutUs =
   transform: translateX(${props => (props.inView ? 0 : '25rem')});
   transition: opacity 0.66s, transform 0.66s;
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     max-width: 63rem;
     margin: 0 auto;
   }
@@ -54,7 +54,7 @@ export const HeadlineAboutUs = styled.div`
     }
   }
 
-  @media (width >= ${props => props.theme.screenSize.sizeLG}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeLG}) {
     h1 {
       font-size: 2.5rem;
       line-height: 3.7rem;

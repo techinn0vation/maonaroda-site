@@ -1,7 +1,7 @@
 import styled from 'styled-components'
+import Link from 'next/link'
 
 import { BsEye, BsEyeSlash } from 'react-icons/bs'
-import Link from 'next/link'
 
 export const WrapperLogin = styled.section`
   width: 100%;
@@ -19,7 +19,7 @@ export const ContentLogin = styled.div`
   align-items: center;
   gap: 2rem;
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     max-width: 50%;
     margin: 0 auto;
   }
@@ -65,7 +65,7 @@ export const HeadlineLogin = styled.div`
     }
   }
 
-  @media (width >= ${props => props.theme.screenSize.sizeLG}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     h1 {
       font-size: 2.5rem;
       line-height: 3.7rem;

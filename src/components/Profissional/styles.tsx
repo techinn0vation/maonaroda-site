@@ -42,7 +42,7 @@ export const ContentProfissional = styled.div`
     border-radius: 2rem;
   }
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     flex-direction: row;
 
     &::before {
@@ -99,13 +99,13 @@ export const SubHeadlineProfissional = styled.div`
     }
   }
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     h1 {
       font-size: 2rem;
       line-height: 3rem;
     }
   }
-  @media (width >= ${props => props.theme.screenSize.sizeLG}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeLG}) {
     h1 {
       font-size: 2.5rem;
       line-height: 3.7rem;
@@ -122,12 +122,12 @@ export const WrapperFrameProfissional = styled.div`
 `
 export const FrameProfissional = styled(Image)`
   width: 100%;
+  height: auto;
   max-width: 30vh;
   margin: 0 auto;
-  height: auto;
   object-fit: contain;
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     max-width: 100%;
     object-fit: cover;
     padding: 2rem;

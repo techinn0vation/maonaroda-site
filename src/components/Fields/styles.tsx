@@ -66,7 +66,7 @@ export const WrapperIndicators = styled.div`
   align-items: center;
   gap: 1rem;
 
-  @media (width >= ${props => props.theme.screenSize.sizeLG}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeLG}) {
     display: none;
   }
 `

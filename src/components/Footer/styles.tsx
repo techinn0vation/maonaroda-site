@@ -22,7 +22,7 @@ export const WrapperFooter =
   transform: translateY(${props => (props.inView ? 0 : '25rem')});
   transition: opacity 0.66s, transform 0.66s;
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     gap: 2rem;
   }
 `
@@ -37,7 +37,7 @@ export const ContentFooter = styled.div`
   gap: 2rem;
   padding: 1rem;
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     flex-direction: row;
   }
 `
@@ -92,7 +92,7 @@ export const LinkField = styled(Link)`
     color: ${props => props.theme.colors.colorB};
   }
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     p {
       cursor: pointer;
     }
@@ -175,7 +175,7 @@ export const SubDescriptionFooter = styled.div`
     }
   }
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     p {
       cursor: pointer;
     }
