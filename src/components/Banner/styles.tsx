@@ -13,6 +13,10 @@ export const WrapperBanner =
   styled.section <
   Animation >
   `
+export const WrapperBanner =
+  styled.section <
+  Animation >
+  `
   width: 100%;
   height: auto;
   display: flex;
@@ -65,8 +69,8 @@ export const ContentBanner = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
 `
 export const HeadlineBanner = styled.div`
@@ -98,7 +102,14 @@ export const HeadlineBanner = styled.div`
     }
   }
 
-  @media (width >= ${props => props.theme.screenSize.sizeLG}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
+    h1 {
+      font-size: 2.3rem;
+      line-height: 3.5rem;
+    }
+  }
+
+  @media (min-width: ${props => props.theme.screenSize.sizeLG}) {
     h1 {
       font-size: 2.5rem;
       line-height: 3.7rem;
