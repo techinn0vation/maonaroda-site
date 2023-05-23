@@ -13,10 +13,6 @@ export const WrapperBanner =
   styled.section <
   Animation >
   `
-export const WrapperBanner =
-  styled.section <
-  Animation >
-  `
   width: 100%;
   height: auto;
   display: flex;
