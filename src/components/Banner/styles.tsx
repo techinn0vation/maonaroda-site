@@ -6,10 +6,13 @@ import { BsApple } from 'react-icons/bs'
 import { IoLogoGooglePlaystore } from 'react-icons/io5'
 
 interface Animation {
-  inView: boolean
+  inView: boolean;
 }
 
-export const WrapperBanner = styled.section<Animation>`
+export const WrapperBanner =
+  styled.section <
+  Animation >
+  `
   width: 100%;
   height: auto;
   display: flex;
@@ -62,8 +65,8 @@ export const ContentBanner = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
 `
 export const HeadlineBanner = styled.div`
@@ -92,6 +95,13 @@ export const HeadlineBanner = styled.div`
     line-height: 2.1rem;
     &::first-letter {
       text-transform: capitalize;
+    }
+  }
+
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
+    h1 {
+      font-size: 2.3rem;
+      line-height: 3.5rem;
     }
   }
 
@@ -185,4 +195,3 @@ export const ImageFrameBanner = styled(Image)`
   box-shadow: 0 0 0.9rem 0 rgba(0, 0, 0, 0.1);
   border: solid ${props => props.theme.colors.colorF} 0.02rem;
 `
-

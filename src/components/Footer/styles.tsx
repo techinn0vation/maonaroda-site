@@ -117,6 +117,7 @@ export const LinkIcon = styled(Link)`
   font-size: 2rem;
   outline: solid ${props => props.theme.colors.colorA} 0.2rem;
   border-radius: 100%;
+  -webkit-border-radius: 100%;
   padding: 0.5rem;
 
   transition: ease-in 0.09s;
