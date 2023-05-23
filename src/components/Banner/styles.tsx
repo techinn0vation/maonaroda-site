@@ -94,12 +94,6 @@ export const HeadlineBanner = styled.div`
       text-transform: capitalize;
     }
   }
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
-    h1 {
-      font-size: 2rem;
-      line-height: 3rem;
-    }
-  }
 
   @media (min-width: ${props => props.theme.screenSize.sizeLG}) {
     h1 {
