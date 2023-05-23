@@ -43,7 +43,7 @@ export const ContentLinks =
   gap: 3rem;
   position: relative;
 
-  @media (width <= ${props => props.theme.screenSize.sizeMD}) {
+  @media (max-width: ${props => props.theme.screenSize.sizeMD}) {
     width: 100%;
     height: 100vh;
     background-color: ${props => props.theme.colors.colorC};
@@ -129,7 +129,7 @@ export const DisplayLink = styled(Link)`
 export const ContentButtons = styled.div`
   z-index: 999;
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     display: none;
   }
 `

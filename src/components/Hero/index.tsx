@@ -16,7 +16,7 @@ import {
   HeadlineHero,
   HeroFrame,
   ItalicizedText,
-  RowIitalicizedText,
+  RowItalicizedText,
   SubHeadlineHero,
   WrapperHero
 } from './styles'
@@ -46,11 +46,11 @@ export default function Hero() {
                 <BsArrowDown />
               </ButtonHero>
             </Link>
-            <RowIitalicizedText>
+            <RowItalicizedText>
               <ItalicizedText>° 2 mil empreendedores</ItalicizedText>
               em todo o estado, profissionais e confiáveis na espera para
               atende-lós.
-            </RowIitalicizedText>
+            </RowItalicizedText>
           </HeadlineHero>
         </BlockHero>
         <BlockHero>

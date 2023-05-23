@@ -19,7 +19,6 @@ export const WrapperBanner =
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
   position: relative;
 
   &::after {
@@ -45,23 +44,21 @@ export const WrapperBanner =
   }
 
   opacity: ${props => (props.inView ? 1 : 0)};
-  transform: translateX(${props => (props.inView ? 0 : '-25rem')});
+  transform: translateX(${props => (props.inView ? 0 : '-15rem')});
   transition: opacity 0.66s, transform 0.66s;
 `
 export const BlockBanner = styled.div`
   width: 100%;
-  max-width: 102.4rem;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
   gap: 3rem;
   z-index: 1;
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     flex-direction: row;
-    padding: 0rem;
   }
 `
 export const ContentBanner = styled.div`
@@ -101,13 +98,7 @@ export const HeadlineBanner = styled.div`
     }
   }
 
-  @media (width >= ${props => props.theme.screenSize.sizeMD}) {
-    h1 {
-      font-size: 2rem;
-      line-height: 3rem;
-    }
-  }
-  @media (width >= ${props => props.theme.screenSize.sizeLG}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeLG}) {
     h1 {
       font-size: 2.5rem;
       line-height: 3.7rem;

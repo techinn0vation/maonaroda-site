@@ -15,15 +15,8 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     min-height: 100vh;
     --webkit-font-smoothing: antialiased;
-    -webkit-tap-highlight-color: transparent;
     text-rendering: optimizeLegibility;
     font-family: 'Poppins', sans-serif;
     background: ${globalBackground};
-    
-    &::-webkit-scrollbar {
-      width: 0;
-      height: 0;
-    }
   }
-
 `
