@@ -20,7 +20,7 @@ export const WrapperHero =
   gap: 5rem;
 
   opacity: ${props => (props.inView ? 1 : 0)};
-  transform: translateZ(${props => (props.inView ? 0 : '25rem')});
+  transform: translateZ(${props => (props.inView ? 0 : '15rem')});
   transition: opacity 0.66s, transform 0.66s;
 `
 
@@ -65,8 +65,8 @@ export const HeadlineHero = styled.div`
 
   @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     h1 {
-      font-size: 2.3rem;
-      line-height: 3.45rem;
+      font-size: 2.5rem;
+      line-height: 3.7rem;
     }
   }
 
@@ -180,7 +180,7 @@ export const ButtonHero = styled.button`
 
   outline-offset: 0.2rem;
 
-  transition: ease-in 0.02s;
+  transition: ease-in 0.01s;
   &:focus:active {
     transform: translateY(0.2rem);
     outline: solid ${props => props.theme.colors.colorE} 0.2rem;
@@ -195,7 +195,7 @@ export const BsArrowDown = styled(BsArrowDownCircleFill)`
   padding: 0.09rem;
 `
 
-export const RowIitalicizedText = styled.p`
+export const RowItalicizedText = styled.p`
   color: ${props => props.theme.colors.colorB};
   font-style: normal;
   font-weight: 500;

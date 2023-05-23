@@ -19,7 +19,7 @@ export const WrapperFooter =
   background: ${props => props.theme.colors.colorF};
 
   opacity: ${props => (props.inView ? 1 : 0)};
-  transform: translateY(${props => (props.inView ? 0 : '25rem')});
+  transform: translateY(${props => (props.inView ? 0 : '15rem')});
   transition: opacity 0.66s, transform 0.66s;
 
   @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
@@ -47,13 +47,14 @@ export const BlockFooter = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 1.6rem;
 
   p {
     font-style: normal;
     font-weight: 600;
     font-size: 1.6rem;
-    line-height: 2.1rem;
+    line-height: 2.4rem;
     text-transform: uppercase;
     color: ${props => props.theme.colors.colorB};
   }

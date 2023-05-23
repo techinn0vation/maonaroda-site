@@ -54,7 +54,7 @@ export default function FormLogin() {
           </BlockField>
           <ContentCheckField>
             <CheckField type="checkbox" />
-            <Text message="permanecer conectado" />
+            <Text message="permanecer conectado." />
           </ContentCheckField>
         </ContentFields>
         <ButtonLogin href="/login">

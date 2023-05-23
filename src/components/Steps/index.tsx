@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
+import { useInView } from 'react-intersection-observer'
+
 import Text from '../Text'
 import Title from '../Title'
-
-import { useInView } from 'react-intersection-observer'
 
 import IMG_B003 from '..//..//..//public/img/IMG_B003.png'
 import IMG_B006 from '..//..//..//public/img/IMG_B006.png'

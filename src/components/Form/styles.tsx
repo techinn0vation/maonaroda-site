@@ -65,7 +65,7 @@ export const HeadlineLogin = styled.div`
     }
   }
 
-  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
+  @media (min-width: ${props => props.theme.screenSize.sizeLG}) {
     h1 {
       font-size: 2.5rem;
       line-height: 3.7rem;
@@ -115,7 +115,7 @@ export const InputField = styled.input`
     text-transform: uppercase;
     font-size: 1.2rem;
     line-height: 1.8rem;
-    opacity: 0.55;
+    opacity: 0.88;
   }
 `
 export const TogglePasswordButton = styled.div`
@@ -183,7 +183,7 @@ export const ContentCheckField = styled.div`
     font-style: normal;
     font-weight: 500;
     font-size: 1.3rem;
-    line-height: 2.1rem;
+    line-height: 1.9rem;
     opacity: 0.55;
     color: ${props => props.theme.colors.colorA};
     &::first-letter {
@@ -193,8 +193,8 @@ export const ContentCheckField = styled.div`
 `
 export const CheckField = styled.input`
   appearance: none;
-  width: 18px;
-  height: 18px;
+  width: 1.8rem;
+  height: 1.8rem;
   border: 0.1rem solid ${props => props.theme.colors.colorB};
   border-radius: 0.5rem;
   outline: none;

@@ -16,11 +16,11 @@ export const WrapperAboutUs =
   align-items: center;
 
   opacity: ${props => (props.inView ? 1 : 0)};
-  transform: translateX(${props => (props.inView ? 0 : '25rem')});
+  transform: translateX(${props => (props.inView ? 0 : '15rem')});
   transition: opacity 0.66s, transform 0.66s;
 
   @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
-    max-width: 63rem;
+    max-width: 60rem;
     margin: 0 auto;
   }
 `

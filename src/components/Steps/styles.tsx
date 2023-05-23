@@ -26,7 +26,7 @@ export const WrapperStepByStep =
   background: ${props => props.theme.colors.colorF};
 
   opacity: ${props => (props.inView ? 1 : 0)};
-  transform: translateX(${props => (props.inView ? 0 : '25rem')});
+  transform: translateX(${props => (props.inView ? 0 : '15rem')});
   transition: opacity 0.66s, transform 0.66s;
 `
 export const HeadlineStepByStep = styled.div`
@@ -90,12 +90,18 @@ export const BlockStepByStep = styled.div`
   gap: 2rem;
 
   overflow-x: scroll;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 
   &::-webkit-scrollbar {
     width: 0;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
   }
 `
 export const WrapperFrameStepByStep = styled.div`
@@ -110,7 +116,7 @@ export const WrapperFrameStepByStep = styled.div`
   padding: 1rem;
 `
 export const FrameStepByStep = styled(Image)`
-  width: auto;
+  width: 90%;
   height: auto;
   box-shadow: 0 0 0.9rem 0 rgba(0, 0, 0, 0.1);
   border-radius: 1.6rem;

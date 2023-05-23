@@ -17,7 +17,7 @@ export const WrapperProfissional =
   align-items: center;
 
   opacity: ${props => (props.inView ? 1 : 0)};
-  transform: translateX(${props => (props.inView ? 0 : '-25rem')});
+  transform: translateX(${props => (props.inView ? 0 : '-15rem')});
   transition: opacity 0.66s, transform 0.66s;
 `
 export const ContentProfissional = styled.div`
@@ -49,6 +49,7 @@ export const ContentProfissional = styled.div`
       content: '';
       width: 100%;
       max-width: 75%;
+      margin: 0 auto;
       height: 100%;
       max-height: 100%;
       position: absolute;
@@ -99,12 +100,6 @@ export const SubHeadlineProfissional = styled.div`
     }
   }
 
-  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
-    h1 {
-      font-size: 2rem;
-      line-height: 3rem;
-    }
-  }
   @media (min-width: ${props => props.theme.screenSize.sizeLG}) {
     h1 {
       font-size: 2.5rem;
