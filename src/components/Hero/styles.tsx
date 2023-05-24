@@ -58,8 +58,8 @@ export const HeadlineHero = styled.div`
     color: ${props => props.theme.colors.colorB};
     font-style: normal;
     font-weight: 700;
-    font-size: 2.2rem;
-    line-height: 3.3rem;
+    font-size: 2.3rem;
+    line-height: 3.45rem;
     text-transform: uppercase;
   }
 
@@ -178,19 +178,16 @@ export const ButtonHero = styled.button`
     }
   }
 
-  outline-offset: 0.2rem;
-
-  transition: ease-in 0.01s;
-  &:focus:active {
+  transition: ease-in 0.03s;
+  &:active {
     transform: translateY(0.2rem);
-    outline: solid ${props => props.theme.colors.colorE} 0.2rem;
   }
 `
 
 export const BsArrowDown = styled(BsArrowDownCircleFill)`
   color: ${props => props.theme.colors.colorC};
   font-size: 1.6rem;
-  outline: solid ${props => props.theme.colors.colorC} 0.1rem;
+  border: solid ${props => props.theme.colors.colorC} 0.1rem;
   border-radius: 100%;
   padding: 0.09rem;
 `
