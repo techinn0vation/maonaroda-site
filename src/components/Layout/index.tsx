@@ -7,9 +7,6 @@ import Footer from '../Footer'
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <WrapperLayout>
-      <Head>
-        <title>Mão na Roda</title>
-      </Head>
       <ScrollProgress />
       <Navigation />
       {children}

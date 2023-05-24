@@ -3,12 +3,19 @@ import { useInView } from 'react-intersection-observer'
 import { WrapperAboutUs, HeadlineAboutUs } from '@/components/Sobre/styles'
 import Title from '@/components/Title'
 import Text from '@/components/Text'
+import SettingsSeo from '@/components/Seo'
 
 export default function Sobre() {
   const { ref, inView } = useInView()
 
   return (
     <Layout>
+      <SettingsSeo
+        title="Mão na roda - Sobre"
+        description="Descrição da minha página"
+        keywords="palavras-chave, separadas, por, vírgulas"
+      />
+
       <WrapperAboutUs ref={ref} inView={inView}>
         <HeadlineAboutUs>
           <Title message="quem somos" />
