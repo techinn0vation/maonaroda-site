@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { BsApple } from 'react-icons/bs'
 import { IoLogoGooglePlaystore } from 'react-icons/io5'
@@ -53,12 +53,13 @@ export const BlockBanner = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1.5rem 0;
   gap: 3rem;
   z-index: 1;
 
   @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     flex-direction: row;
+    padding: 1.5rem;
   }
 `
 export const ContentBanner = styled.div`
@@ -101,7 +102,7 @@ export const HeadlineBanner = styled.div`
   @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     h1 {
       font-size: 2.3rem;
-      line-height: 3.5rem;
+      line-height: 3.45rem;
     }
   }
 
@@ -168,8 +169,8 @@ export const BlockTextStore = styled.div`
     color: ${props => props.theme.colors.colorC};
     font-style: normal;
     font-weight: 700;
-    font-size: 1.2rem;
-    line-height: 1.8rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     text-transform: capitalize;
   }
 `

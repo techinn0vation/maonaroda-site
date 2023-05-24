@@ -10,17 +10,23 @@ export const WrapperFooter =
   Animation >
   `
   width: 100%;
-  min-width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background: ${props => props.theme.colors.colorF};
 
   opacity: ${props => (props.inView ? 1 : 0)};
   transform: translateY(${props => (props.inView ? 0 : '15rem')});
   transition: opacity 0.66s, transform 0.66s;
+
+  &::before {
+    content: '';
+    width: 100vw;
+    height: 0.05rem;
+    background: ${props => props.theme.colors.colorA};
+    opacity: 0.66;
+  }
 
   @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     gap: 2rem;
@@ -115,12 +121,12 @@ export const LinkIcon = styled(Link)`
 
   color: ${props => props.theme.colors.colorA};
   font-size: 2rem;
-  outline: solid ${props => props.theme.colors.colorA} 0.2rem;
+  border: solid ${props => props.theme.colors.colorA} 0.2rem;
   border-radius: 100%;
-  -webkit-border-radius: 100%;
   padding: 0.5rem;
 
   transition: ease-in 0.09s;
+  text-decoration: none;
 
   &:focus:active {
     transform: translateY(0.2rem);
@@ -128,30 +134,30 @@ export const LinkIcon = styled(Link)`
 
   &:nth-child(1):hover {
     transition: ease-in 0.09s;
-
+    -webkit-transition: ease-in 0.09s;
     color: ${props => props.theme.colors.colorB};
-    outline: solid ${props => props.theme.colors.colorB} 0.2rem;
+    border: solid ${props => props.theme.colors.colorB} 0.2rem;
     box-shadow: 0 0 0.6rem 0 ${props => props.theme.colors.colorB};
   }
   &:nth-child(2):hover {
     transition: ease-in 0.09s;
-
+    -webkit-transition: ease-in 0.09s;
     color: ${props => props.theme.colors.colorE};
-    outline: solid ${props => props.theme.colors.colorE} 0.2rem;
+    border: solid ${props => props.theme.colors.colorE} 0.2rem;
     box-shadow: 0 0 0.6rem 0 ${props => props.theme.colors.colorE};
   }
   &:nth-child(3):hover {
     transition: ease-in 0.09s;
-
+    -webkit-transition: ease-in 0.09s;
     color: ${props => props.theme.colors.colorH};
-    outline: solid ${props => props.theme.colors.colorH} 0.2rem;
+    border: solid ${props => props.theme.colors.colorH} 0.2rem;
     box-shadow: 0 0 0.6rem 0 ${props => props.theme.colors.colorH};
   }
   &:nth-child(4):hover {
     transition: ease-in 0.09s;
-
+    -webkit-transition: ease-in 0.09s;
     color: ${props => props.theme.colors.colorI};
-    outline: solid ${props => props.theme.colors.colorI} 0.2rem;
+    border: solid ${props => props.theme.colors.colorI} 0.2rem;
     box-shadow: 0 0 0.6rem 0 ${props => props.theme.colors.colorI};
   }
 `

@@ -16,7 +16,6 @@ export const WrapperNavigation = styled.nav`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 3rem;
 `
 export const LogoBranding = styled(Image)`
   width: 100%;
@@ -118,11 +117,6 @@ export const DisplayLink = styled(Link)`
 
     &:hover::after {
       background: transparent;
-    }
-    &:hover {
-      outline-offset: 0.2rem;
-      transition: ease-in 0.1s all;
-      outline: solid ${props => props.theme.colors.colorE} 0.2rem;
     }
   }
 `

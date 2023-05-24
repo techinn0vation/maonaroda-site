@@ -162,12 +162,10 @@ export const ButtonLogin = styled(Link)`
     }
   }
 
-  outline-offset: 0.2rem;
   text-decoration: none;
   transition: ease-in 0.02s;
   &:focus:active {
     transform: translateY(0.2rem);
-    outline: solid ${props => props.theme.colors.colorE} 0.2rem;
   }
 `
 export const ContentCheckField = styled.div`
@@ -184,7 +182,7 @@ export const ContentCheckField = styled.div`
     font-weight: 500;
     font-size: 1.3rem;
     line-height: 1.9rem;
-    opacity: 0.55;
+    opacity: 0.77;
     color: ${props => props.theme.colors.colorA};
     &::first-letter {
       text-transform: uppercase;
