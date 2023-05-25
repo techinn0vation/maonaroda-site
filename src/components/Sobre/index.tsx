@@ -19,7 +19,7 @@ export default function SobreNos() {
           message="Junte-se à comunidade do Mão na roda hoje mesmo e descubra como podemos simplificar sua vida ou impulsionar sua carreira na prestação de serviços domésticos.
          Estamos aqui para ajudar você a encontrar soluções personalizadas para todas as necessidades do seu lar."
         />
-        <ButtonAboutUs href="#">
+        <ButtonAboutUs href="/sobre">
           <Text message="saber mais" />
         </ButtonAboutUs>
       </BlockTextAboutUs>

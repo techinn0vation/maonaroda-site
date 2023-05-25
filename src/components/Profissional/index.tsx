@@ -34,7 +34,7 @@ export default function Profissional() {
             <Text message="aumente sua renda oferecendo serviços domésticos. Baixe o aplicativo agora!" />
             <Text message="ganhe dinheiro fazendo o que você ama. Baixe o aplicativo e comece hoje!" />
           </SubHeadlineProfissional>
-          <ButtonAccess href="/sobre">
+          <ButtonAccess href="/">
             <Text message="acessar aplicativo" />
           </ButtonAccess>
         </BlockProfissional>
