@@ -86,10 +86,10 @@ export const SubHeadlineHero = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   gap: 2rem;
+  direction: rtl;
   text-align: left;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  direction: rtl;
 
   p {
     color: ${props => props.theme.colors.colorB};
@@ -99,6 +99,9 @@ export const SubHeadlineHero = styled.div`
     line-height: 2.1rem;
     margin-left: 1rem;
     direction: ltr;
+    &::first-letter {
+      text-transform: capitalize;
+    }
   }
 
   &::-webkit-scrollbar {

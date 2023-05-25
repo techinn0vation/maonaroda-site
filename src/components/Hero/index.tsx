@@ -28,10 +28,16 @@ export default function Hero() {
       <ContentHero>
         <BlockHero>
           <HeadlineHero>
-            <Title message="laurem ipsilum rusy busky darskmgty busky darskmgty" />
+            <Title message="transforme seu lar com facilidade!" />
             <SubHeadlineHero>
-              <Text message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis vel velit ut faucibus. Nam interdum tellus id nunc hendrerit efficitur. Cras auctor eros quam, per conubia nostra, per inceptos himenaeos." />
-              <Text message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis vel velit ut faucibus. Nam interdum tellus id nunc hendrerit efficitur. Cras auctor eros quam, per conubia nostra, per inceptos himenaeos." />
+              <Text
+                message="descubra o app Mão na roda, a solução completa para serviços domésticos.
+                encontre profissionais qualificados em várias categorias próximos a você.
+                baixe o app e simplifique sua vida!"
+              />
+              <Text message="clientes: receba ajuda especializada para todos os reparos e projetos em sua casa. Garanta serviços de qualidade e um lar impecável." />
+              <Text message="profissionais: Aumente sua renda e conquiste novos clientes. defina sua agenda, mostre seu talento e destaque-se em sua área." />
+              <Text message="baixe o app agora e transforme seu lar com praticidade!" />
             </SubHeadlineHero>
             <Link
               activeClass="active"

@@ -31,8 +31,10 @@ export default function Profissional() {
           <SubHeadlineProfissional>
             <Title message="você é um profissional?" />
             <Text message="centenas de solicitações por dia esperando por você" />
+            <Text message="aumente sua renda oferecendo serviços domésticos. Baixe o aplicativo agora!" />
+            <Text message="ganhe dinheiro fazendo o que você ama. Baixe o aplicativo e comece hoje!" />
           </SubHeadlineProfissional>
-          <ButtonAccess href="/#">
+          <ButtonAccess href="/sobre">
             <Text message="acessar aplicativo" />
           </ButtonAccess>
         </BlockProfissional>
