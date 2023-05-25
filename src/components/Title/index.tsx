@@ -1,9 +1,9 @@
-import { DisplayTitle } from './styles'
+import { RowTitle } from './styles'
 
-interface PropTitle {
-  message: string;
+interface PropText {
+  DisplayTitle: string;
 }
 
-export default function Title(props: PropTitle) {
-  return <DisplayTitle>{props.message}</DisplayTitle>
+export default function DisplayTitle({ DisplayTitle }: PropText) {
+  return <RowTitle>{DisplayTitle}</RowTitle>
 }

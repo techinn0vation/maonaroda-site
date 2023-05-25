@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const DisplayTitle = styled.h1`
+export const RowTitle = styled.h1`
   color: ${props => props.theme.colors.colorA};
   font-size: 1rem;
   font-style: normal;

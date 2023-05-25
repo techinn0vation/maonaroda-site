@@ -1,70 +1,48 @@
-import Title from '../Title'
-import Text from '../Text'
-import Fields from '../Fields'
-import { Link } from 'react-scroll'
-import { useInView } from 'react-intersection-observer'
-
-import IMG_B001 from '..//..//..//public/img/IMG_B001.png'
+import DisplayTitle from '../Title'
+import DisplayTypography from '../Typography'
 
 import {
-  BackgroundFrame,
-  BlockHero,
-  BsArrowDown,
-  ButtonHero,
+  WrapperHero,
   ContentHero,
-  FrameFloating,
-  HeadlineHero,
-  HeroFrame,
-  ItalicizedText,
-  RowItalicizedText,
-  SubHeadlineHero,
-  WrapperHero
+  BlockHero,
+  HeroHeadline,
+  SubHeroHeadline
 } from './styles'
 
 export default function Hero() {
-  const { ref, inView } = useInView()
   return (
-    <WrapperHero ref={ref} inView={inView}>
+    <WrapperHero>
       <ContentHero>
         <BlockHero>
-          <HeadlineHero>
-            <Title message="laurem ipsilum rusy busky darskmgty busky darskmgty" />
-            <SubHeadlineHero>
-              <Text message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis vel velit ut faucibus. Nam interdum tellus id nunc hendrerit efficitur. Cras auctor eros quam, per conubia nostra, per inceptos himenaeos." />
-              <Text message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis vel velit ut faucibus. Nam interdum tellus id nunc hendrerit efficitur. Cras auctor eros quam, per conubia nostra, per inceptos himenaeos." />
-            </SubHeadlineHero>
-            <Link
-              activeClass="active"
-              to="banner"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={1000}
-            >
-              <ButtonHero>
-                <Text message="baixe grátis agora mesmo!" />
-                <BsArrowDown />
-              </ButtonHero>
-            </Link>
-            <RowItalicizedText>
-              Profissionais <ItalicizedText>especializados.</ItalicizedText>
-              Serviços confiáveis. Sua casa em boas mãos. Experimente agora!
-            </RowItalicizedText>
-          </HeadlineHero>
-        </BlockHero>
-        <BlockHero>
-          <HeroFrame>
-            <BackgroundFrame
-              src={IMG_B001}
-              alt="Image serviço"
-              priority={true}
+          <HeroHeadline>
+            <DisplayTitle DisplayTitle={'transforme seu lar com facilidade!'} />
+          </HeroHeadline>
+          <SubHeroHeadline>
+            <DisplayTypography
+              DisplayTypography={
+                'descubra o Mão na roda, a solução completa para serviços domésticos. Encontre profissionais qualificados em várias categorias próximos a você. Baixe o app e simplifique sua vida!'
+              }
             />
-            <FrameFloating />
-            <FrameFloating />
-          </HeroFrame>
+            <DisplayTypography
+              DisplayTypography={
+                'Clientes: Receba ajuda especializada para todos os reparos e projetos em sua casa. Garanta serviços de qualidade e um lar impecável.'
+              }
+            />
+            <DisplayTypography
+              DisplayTypography={
+                'Profissionais: Aumente sua renda e conquiste novos clientes. Defina sua agenda, mostre seu talento e destaque-se em sua área.'
+              }
+            />
+            <DisplayTypography
+              DisplayTypography={
+                'Baixe o app agora e transforme seu lar com praticidade!'
+              }
+            />
+          </SubHeroHeadline>
         </BlockHero>
+
+        <BlockHero></BlockHero>
       </ContentHero>
-      <Fields />
     </WrapperHero>
   )
 }
