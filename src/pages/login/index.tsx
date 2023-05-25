@@ -7,8 +7,8 @@ export default function Login() {
     <Layout>
       <SettingsSeo
         title="Mão na roda - Login"
-        description="Descrição da minha página"
-        keywords="palavras-chave, separadas, por, vírgulas"
+        description="Pagina de login Mão na roda"
+        keywords="Solicitação de serviços, Login de usuário, Acesso à conta, Portal de solicitações"
       />
       <FormLogin />
     </Layout>

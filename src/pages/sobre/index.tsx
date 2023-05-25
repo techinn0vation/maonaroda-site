@@ -12,8 +12,8 @@ export default function Sobre() {
     <Layout>
       <SettingsSeo
         title="Mão na roda - Sobre"
-        description="Descrição da minha página"
-        keywords="palavras-chave, separadas, por, vírgulas"
+        description="Pagina sobre a empresa Mão na roda"
+        keywords="Empresa, História, Missão, Experiência, Compromisso, Diferenciais"
       />
 
       <WrapperAboutUs ref={ref} inView={inView}>

@@ -11,8 +11,8 @@ export default function HomePage() {
     <Layout>
       <SettingsSeo
         title="Mão na roda"
-        description="Descrição da minha página"
-        keywords="palavras-chave, separadas, por, vírgulas"
+        description="Serviços especializados e soluções eficientes"
+        keywords="Mão na roda, Serviços diversos, Soluções personalizadas, Qualidade e confiabilidade, Plataforma de serviços"
       />
       <Hero />
       <Banner title="faça o download do nosso aplicativo" text="" />

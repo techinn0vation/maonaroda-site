@@ -6,11 +6,11 @@ export default function SolicitarServiço() {
     <Layout>
       <SettingsSeo
         title="Mão na roda - Solicitar serviço"
-        description="Descrição da minha página"
-        keywords="palavras-chave, separadas, por, vírgulas"
+        description="Página solicitação de serviços"
+        keywords="Serviços, Compromisso, Equipe, Qualidade, Agendamento, Solicitação"
       />
 
-      <h1>Coming soon...!</h1>
+      <h1>Em breve...</h1>
     </Layout>
   )
 }
