@@ -62,7 +62,7 @@ export default function FormLogin() {
         </ButtonLogin>
       </ContentLogin>
       <Banner
-        title="não tem um login para se conectar?"
+        title="ainda não tem login para se conectar?"
         text="cadastre-se no app"
       />
     </WrapperLogin>

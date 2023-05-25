@@ -47,9 +47,8 @@ export default function Hero() {
               </ButtonHero>
             </Link>
             <RowItalicizedText>
-              <ItalicizedText>° 2 mil empreendedores</ItalicizedText>
-              em todo o estado, profissionais e confiáveis na espera para
-              atende-lós.
+              Profissionais <ItalicizedText>especializados.</ItalicizedText>
+              Serviços confiáveis. Sua casa em boas mãos. Experimente agora!
             </RowItalicizedText>
           </HeadlineHero>
         </BlockHero>

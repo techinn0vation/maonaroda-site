@@ -14,17 +14,17 @@ export const WrapperAboutUs =
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  gap: 2rem;
   opacity: ${props => (props.inView ? 1 : 0)};
   transform: translateX(${props => (props.inView ? 0 : '15rem')});
   transition: opacity 0.66s, transform 0.66s;
 
   @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
-    max-width: 60rem;
+    max-width: 80rem;
     margin: 0 auto;
   }
 `
-export const HeadlineAboutUs = styled.div`
+export const BlockTextAboutUs = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;

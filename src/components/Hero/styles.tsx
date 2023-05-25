@@ -98,6 +98,7 @@ export const SubHeadlineHero = styled.div`
     font-size: 1.4rem;
     line-height: 2.1rem;
     margin-left: 1rem;
+    direction: ltr;
   }
 
   &::-webkit-scrollbar {

@@ -31,31 +31,31 @@ export default function Fields() {
     <WrapperSlide>
       <ContentSlide id="content-assets">
         <BlockSlide id="slide-1">
-          <FrameSlideImage src={SVG_B007} alt="Linkedin" />
+          <FrameSlideImage src={SVG_B007} alt="Linkedin Mão na roda" />
           <Text message="linkedin" />
         </BlockSlide>
         <BlockSlide>
-          <FrameSlideImage src={SVG_B008} alt="Twitter" />
+          <FrameSlideImage src={SVG_B008} alt="Twitter Mão na roda" />
           <Text message="twitter" />
         </BlockSlide>
         <BlockSlide id="slide-2">
-          <FrameSlideImage src={SVG_B009} alt="github" />
+          <FrameSlideImage src={SVG_B009} alt="github Mão na roda" />
           <Text message="github" />
         </BlockSlide>
         <BlockSlide>
-          <FrameSlideImage src={SVG_B010} alt="blogger" />
+          <FrameSlideImage src={SVG_B010} alt="blogger Mão na roda" />
           <Text message="blogger" />
         </BlockSlide>
         <BlockSlide id="slide-3">
-          <FrameSlideImage src={SVG_B011} alt="google" />
+          <FrameSlideImage src={SVG_B011} alt="google Mão na roda" />
           <Text message="google" />
         </BlockSlide>
         <BlockSlide>
-          <FrameSlideImage src={SVG_B012} alt="visa" />
+          <FrameSlideImage src={SVG_B012} alt="visa Mão na roda" />
           <Text message="visa" />
         </BlockSlide>
         <BlockSlide id="slide-4">
-          <FrameSlideImage src={SVG_B013} alt="mastercard" />
+          <FrameSlideImage src={SVG_B013} alt="mastercard Mão na roda" />
           <Text message="mastercard" />
         </BlockSlide>
       </ContentSlide>

@@ -12,7 +12,7 @@ export default function HomePage() {
       <SettingsSeo
         title="Mão na roda"
         description="Serviços especializados e soluções eficientes"
-        keywords="Mão na roda, Serviços diversos, Soluções personalizadas, Qualidade e confiabilidade, Plataforma de serviços"
+        keywords="Mão na roda, Serviços diversos, Soluções personalizadas, Qualidade e confiabilidade, Plataforma de serviços, Download, App"
       />
       <Hero />
       <Banner title="faça o download do nosso aplicativo" text="" />

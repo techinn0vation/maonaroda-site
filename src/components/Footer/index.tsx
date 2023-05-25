@@ -1,11 +1,10 @@
 import { LogoBranding } from '../Navigation/styles'
-import Text from '../Text'
 import Logo from '..//..//..//public/img/Logo.png'
+import Text from '../Text'
+import { useInView } from 'react-intersection-observer'
 
 import { FiFacebook, FiInstagram } from 'react-icons/fi'
 import { AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai'
-
-import { useInView } from 'react-intersection-observer'
 
 import {
   BlockFooter,
@@ -29,23 +28,18 @@ export default function Footer() {
           <RowBlock>
             <Text message="interesses" />
           </RowBlock>
-          <LinkField href="/#">
-            <Text message="quem somos" />
+          <LinkField href="/sobre">
+            <Text message="sobre nós" />
           </LinkField>
           <LinkField href="/#">
             <Text message="categorias" />
           </LinkField>
-          {/* ===== OUT-OF-ORDER ===== */}
-          <LinkField href="/#">
-            <Text message="blog" />
-          </LinkField>
-          {/* ===== OUT-OF-ORDER ===== */}
           <LinkField href="/#">
             <Text message="trabalhe conosco" />
           </LinkField>
         </BlockFooter>
         <BlockFooter>
-          <LogoBranding src={Logo} alt="Mão na roda-Logo" priority={true} />
+          <LogoBranding src={Logo} alt="Mão na roda Logo" priority={true} />
           <SubDescriptionFooter>
             <LinkField href="/#">
               <Text message="política de privacidade" />

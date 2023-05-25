@@ -1,8 +1,7 @@
 import { WrapperLayout } from './styles'
-import Head from 'next/head'
-import ScrollProgress from '../ScrollProgress'
+import ScrollProgress from '@/components/ScrollProgress'
 import Navigation from '@/components/Navigation'
-import Footer from '../Footer'
+import Footer from '@/components/Footer'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
