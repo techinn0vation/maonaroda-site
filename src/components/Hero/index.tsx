@@ -36,8 +36,10 @@ export default function Hero() {
                 baixe o app e simplifique sua vida!"
               />
               <Text message="clientes: receba ajuda especializada para todos os reparos e projetos em sua casa. Garanta serviços de qualidade e um lar impecável." />
-              <Text message="profissionais: Aumente sua renda e conquiste novos clientes. defina sua agenda, mostre seu talento e destaque-se em sua área." />
-              <Text message="baixe o app agora e transforme seu lar com praticidade!" />
+              <Text
+                message="profissionais: Aumente sua renda e conquiste novos clientes. defina sua agenda, mostre seu talento e destaque-se em sua área. 
+              Baixe o app agora e transforme seu lar com praticidade!"
+              />
             </SubHeadlineHero>
             <Link
               activeClass="active"
