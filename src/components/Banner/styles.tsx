@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import Link from 'next/link'
 
-import { BsApple } from 'react-icons/bs'
 import { IoLogoGooglePlaystore } from 'react-icons/io5'
+import { BsApple } from 'react-icons/bs'
 
 export const WrapperBanner = styled.section`
   width: 100%;
@@ -91,42 +92,55 @@ export const BannerHeadline = styled.div`
     }
   }
 `
-export const BlockStoreButtons = styled.div`
+export const WrapperStoreButtons = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+`
+export const ButtonStore = styled(Link)`
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
 
-  a {
-    width: 100%;
+  text-decoration: none;
+  color: ${props => props.theme.colors.colorC};
+  border: solid ${props => props.theme.colors.colorC} 0.1rem;
+  border-radius: 1rem;
+`
+export const ContentStore = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  /* Component DisplayTitle Filho 1*/
+  h1:nth-child(1) {
     font-style: normal;
     font-weight: 600;
     font-size: 1.2rem;
     line-height: 1.8rem;
-    text-decoration: none;
     color: ${props => props.theme.colors.colorC};
-    border: solid ${props => props.theme.colors.colorC} 0.1rem;
-    border-radius: 1rem;
-
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.5rem;
-
-    transition: ease-in 0.03s;
-    &:active {
-      transform: translateY(0.2rem);
+    &::first-letter {
+      text-transform: capitalize;
     }
   }
 
-  /* Configuração de Media MD (Medium)*/
-  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
-    a {
-      max-width: 15rem;
-      margin: 0;
+  /* Component DisplayTitle Filho 2*/
+  h1:nth-child(2) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: ${props => props.theme.colors.colorC};
+    &::first-letter {
+      text-transform: capitalize;
     }
   }
 `

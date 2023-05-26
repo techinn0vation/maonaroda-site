@@ -1,4 +1,3 @@
-import DisplayButton from '../Button'
 import DisplayTitle from '../Title'
 
 import IMG_B003 from '..//..//..//public/img/IMG_B003.png'
@@ -7,13 +6,15 @@ import IMG_B004 from '..//..//..//public/img/IMG_B004.png'
 import {
   BannerHeadline,
   BlockBanner,
-  BlockStoreButtons,
+  ButtonStore,
+  WrapperStoreButtons,
   ContentBanner,
   FrameStore,
   IconAppStore,
   IconGoogleStore,
   WrapperBanner,
-  WrapperFrameStore
+  WrapperFrameStore,
+  ContentStore
 } from './styles'
 
 export default function Banner() {
@@ -22,22 +23,24 @@ export default function Banner() {
       <ContentBanner>
         <BlockBanner>
           <BannerHeadline>
-            <DisplayTitle
-              DisplayTitle={'faça o download do nosso aplicativo'}
-            />
+            <DisplayTitle DisplayTitle="faça o download do nosso aplicativo" />
           </BannerHeadline>
-          <BlockStoreButtons>
-            <DisplayButton
-              DisplayButton={'Disponível no Google Play'}
-              href={'/'}
-              icon={<IconGoogleStore />}
-            />
-            <DisplayButton
-              DisplayButton={'Disponível na App Store'}
-              href={'/'}
-              icon={<IconAppStore />}
-            />
-          </BlockStoreButtons>
+          <WrapperStoreButtons>
+            <ButtonStore href="https://play.google.com/store/apps/details?id=com.klirineu.maonaroda2">
+              <IconGoogleStore />
+              <ContentStore>
+                <DisplayTitle DisplayTitle="disponível no" />
+                <DisplayTitle DisplayTitle="google store" />
+              </ContentStore>
+            </ButtonStore>
+            <ButtonStore href="https://apps.apple.com/br/app/m%C3%A3o-na-roda-servi%C3%A7os/id6447600628">
+              <IconAppStore />
+              <ContentStore>
+                <DisplayTitle DisplayTitle="disponível na" />
+                <DisplayTitle DisplayTitle="app store" />
+              </ContentStore>
+            </ButtonStore>
+          </WrapperStoreButtons>
         </BlockBanner>
         <BlockBanner>
           <WrapperFrameStore>
