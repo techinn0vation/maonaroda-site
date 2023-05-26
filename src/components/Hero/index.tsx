@@ -1,13 +1,23 @@
 import DisplayTitle from '../Title'
 import DisplayTypography from '../Typography'
 
+import IMG_B001 from '..//..//..//public/img/IMG_B001.png'
+
 import {
   WrapperHero,
   ContentHero,
   BlockHero,
   HeroHeadline,
-  SubHeroHeadline
+  SubHeroHeadline,
+  BackgroundFrame,
+  FrameFloating,
+  ButtonSmooth,
+  BsArrowDown,
+  FrameHero,
+  RowItalicizedText,
+  ItalicizedText
 } from './styles'
+import Fields from '../Fields'
 
 export default function Hero() {
   return (
@@ -25,24 +35,52 @@ export default function Hero() {
             />
             <DisplayTypography
               DisplayTypography={
-                'Clientes: Receba ajuda especializada para todos os reparos e projetos em sua casa. Garanta serviços de qualidade e um lar impecável.'
+                'clientes: Receba ajuda especializada para todos os reparos e projetos em sua casa. Garanta serviços de qualidade e um lar impecável.'
               }
             />
             <DisplayTypography
               DisplayTypography={
-                'Profissionais: Aumente sua renda e conquiste novos clientes. Defina sua agenda, mostre seu talento e destaque-se em sua área.'
+                'profissionais: Aumente sua renda e conquiste novos clientes. Defina sua agenda, mostre seu talento e destaque-se em sua área.'
               }
             />
             <DisplayTypography
               DisplayTypography={
-                'Baixe o app agora e transforme seu lar com praticidade!'
+                'baixe o app agora e transforme seu lar com praticidade!'
               }
             />
           </SubHeroHeadline>
+          <ButtonSmooth
+            activeClass="active"
+            to="banner"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1000}
+          >
+            <DisplayTypography
+              DisplayTypography={'baixe grátis agora mesmo!'}
+            />
+            <BsArrowDown />
+          </ButtonSmooth>
+          <RowItalicizedText>
+            Profissionais <ItalicizedText>especializados.</ItalicizedText>
+            Serviços confiáveis. Sua casa em boas mãos. Experimente agora!
+          </RowItalicizedText>
         </BlockHero>
-
-        <BlockHero></BlockHero>
+        {/*  */}
+        <BlockHero>
+          <FrameHero>
+            <FrameFloating />
+            <FrameFloating />
+            <BackgroundFrame
+              src={IMG_B001}
+              alt="Serviços Mão na roda"
+              priority={true}
+            />
+          </FrameHero>
+        </BlockHero>
       </ContentHero>
+      <Fields />
     </WrapperHero>
   )
 }
