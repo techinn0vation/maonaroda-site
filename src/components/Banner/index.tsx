@@ -1,4 +1,5 @@
 import DisplayTitle from '../Title'
+import DisplayTypography from '../Typography'
 
 import IMG_B003 from '..//..//..//public/img/IMG_B003.png'
 import IMG_B004 from '..//..//..//public/img/IMG_B004.png'
@@ -17,27 +18,33 @@ import {
   ContentStore
 } from './styles'
 
-export default function Banner() {
+interface BannerProps {
+  title: string;
+  text: string;
+}
+
+export default function Banner({ title, text }: BannerProps) {
   return (
     <WrapperBanner id="banner">
       <ContentBanner>
         <BlockBanner>
           <BannerHeadline>
-            <DisplayTitle DisplayTitle="faça o download do nosso aplicativo" />
+            <DisplayTitle DisplayTitle={title} />
+            <DisplayTypography DisplayTypography={text} />
           </BannerHeadline>
           <WrapperStoreButtons>
             <ButtonStore href="https://play.google.com/store/apps/details?id=com.klirineu.maonaroda2">
               <IconGoogleStore />
               <ContentStore>
                 <DisplayTitle DisplayTitle="disponível no" />
-                <DisplayTitle DisplayTitle="google store" />
+                <DisplayTypography DisplayTypography="google store" />
               </ContentStore>
             </ButtonStore>
             <ButtonStore href="https://apps.apple.com/br/app/m%C3%A3o-na-roda-servi%C3%A7os/id6447600628">
               <IconAppStore />
               <ContentStore>
                 <DisplayTitle DisplayTitle="disponível na" />
-                <DisplayTitle DisplayTitle="app store" />
+                <DisplayTypography DisplayTypography="app store" />
               </ContentStore>
             </ButtonStore>
           </WrapperStoreButtons>

@@ -7,23 +7,11 @@ import { BsApple } from 'react-icons/bs'
 
 export const WrapperBanner = styled.section`
   width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: auto;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-`
-export const ContentBanner = styled.div`
-  width: 100%;
-  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  padding: 1.5rem 0;
   position: relative;
 
   &::after {
@@ -38,8 +26,7 @@ export const ContentBanner = styled.div`
 
   /* Configuração de Media MD (Medium)*/
   @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
-    flex-direction: row;
-    padding: 1.5rem;
+    height: 56rem;
     &::after {
       content: '';
       width: 100%;
@@ -50,6 +37,22 @@ export const ContentBanner = styled.div`
     }
   }
 `
+export const ContentBanner = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 1.5rem 0;
+  z-index: 1;
+
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
+    flex-direction: row;
+    padding: 1.5rem;
+  }
+`
 export const BlockBanner = styled.div`
   width: 100%;
   display: flex;
@@ -57,14 +60,14 @@ export const BlockBanner = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  z-index: 1;
 `
 export const BannerHeadline = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 
   /* Component DisplayTitle */
   h1 {
@@ -74,6 +77,19 @@ export const BannerHeadline = styled.div`
     font-size: 2rem;
     line-height: 3rem;
     text-transform: uppercase;
+    text-align: center;
+  }
+
+  /* Component DisplayTypography */
+  p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    color: ${props => props.theme.colors.colorC};
+    &::first-letter {
+      text-transform: capitalize;
+    }
     text-align: center;
   }
 
@@ -114,8 +130,8 @@ export const ButtonStore = styled(Link)`
   border: solid ${props => props.theme.colors.colorC} 0.1rem;
   border-radius: 1rem;
 
-  @media (min-width: ${props => props.theme.screenSize.sizeLG}) {
-    width: 15.5rem;
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
+    width: 15rem;
   }
 `
 export const ContentStore = styled.div`
@@ -125,8 +141,8 @@ export const ContentStore = styled.div`
   justify-content: center;
   align-items: flex-start;
 
-  /* Component DisplayTitle Filho 1*/
-  h1:nth-child(1) {
+  /* Component DisplayTitle*/
+  h1 {
     font-style: normal;
     font-weight: 600;
     font-size: 1.2rem;
@@ -137,8 +153,8 @@ export const ContentStore = styled.div`
     }
   }
 
-  /* Component DisplayTitle Filho 2*/
-  h1:nth-child(2) {
+  /* Component DisplayTypography */
+  p {
     font-style: normal;
     font-weight: 700;
     font-size: 1.2rem;

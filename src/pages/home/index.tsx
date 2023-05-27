@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <Layout>
       <Hero />
-      <Banner />
+      <Banner title="faça o download do nosso aplicativo" text="" />
       <QuemSomos />
     </Layout>
   )

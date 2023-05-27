@@ -23,7 +23,7 @@ export default function Footer() {
       <ContentFooter>
         <BlockFooter>
           <DisplayTitle DisplayTitle="interesses" />
-          <LinkFooter href="/sobreNos">sobre nós</LinkFooter>
+          <LinkFooter href="/sobre">sobre nós</LinkFooter>
           <LinkFooter href="#">categorias</LinkFooter>
           <LinkFooter href="#">trabalhe conosco</LinkFooter>
         </BlockFooter>
