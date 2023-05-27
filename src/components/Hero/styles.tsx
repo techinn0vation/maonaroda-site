@@ -45,17 +45,17 @@ export const HeroHeadline = styled.div`
     color: ${props => props.theme.colors.colorB};
     font-style: normal;
     font-weight: 700;
-    font-size: 2.5rem;
-    line-height: 3.75rem;
+    font-size: 2.3rem;
+    line-height: 3.45rem;
     text-transform: uppercase;
-    text-align: center;
+    text-align: left;
   }
 
   /* Configuração de Media MD (Medium)*/
   @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
     h1 {
-      font-size: 3rem;
-      line-height: 4.5rem;
+      font-size: 2.5rem;
+      line-height: 3.75rem;
       text-align: left;
     }
   }
@@ -63,7 +63,7 @@ export const HeroHeadline = styled.div`
   /* Configuração de Media LG (Large)*/
   @media (min-width: ${props => props.theme.screenSize.sizeLG}) {
     h1 {
-      font-size: 3.5rem;
+      font-size: 3.4rem;
       line-height: 5.25rem;
     }
   }

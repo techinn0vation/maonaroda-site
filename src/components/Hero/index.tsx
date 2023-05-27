@@ -2,6 +2,7 @@ import DisplayTitle from '../Title'
 import DisplayTypography from '../Typography'
 
 import IMG_B001 from '..//..//..//public/img/IMG_B001.png'
+import Fields from '../Fields'
 
 import {
   WrapperHero,
@@ -17,7 +18,6 @@ import {
   RowItalicizedText,
   ItalicizedText
 } from './styles'
-import Fields from '../Fields'
 
 export default function Hero() {
   return (
@@ -25,29 +25,14 @@ export default function Hero() {
       <ContentHero>
         <BlockHero>
           <HeroHeadline>
-            <DisplayTitle DisplayTitle={'transforme seu lar com facilidade!'} />
+            <DisplayTitle DisplayTitle="transforme seu lar com facilidade e praticidade!" />
           </HeroHeadline>
           <SubHeroHeadline>
-            <DisplayTypography
-              DisplayTypography={
-                'descubra o Mão na roda, a solução completa para serviços domésticos. Encontre profissionais qualificados em várias categorias próximos a você. Baixe o app e simplifique sua vida!'
-              }
-            />
-            <DisplayTypography
-              DisplayTypography={
-                'clientes: Receba ajuda especializada para todos os reparos e projetos em sua casa. Garanta serviços de qualidade e um lar impecável.'
-              }
-            />
-            <DisplayTypography
-              DisplayTypography={
-                'profissionais: Aumente sua renda e conquiste novos clientes. Defina sua agenda, mostre seu talento e destaque-se em sua área.'
-              }
-            />
-            <DisplayTypography
-              DisplayTypography={
-                'baixe o app agora e transforme seu lar com praticidade!'
-              }
-            />
+            <DisplayTypography DisplayTypography="descubra o app Mão na roda, a solução completa para serviços domésticos." />
+            <DisplayTypography DisplayTypography="Encontre profissionais qualificados em várias categorias próximos a você. Baixe o app e simplifique sua vida!" />
+            <DisplayTypography DisplayTypography="clientes: Receba ajuda especializada para todos os reparos e projetos em sua casa. Garanta serviços de qualidade e um lar impecável." />
+            <DisplayTypography DisplayTypography="profissionais: Aumente sua renda e conquiste novos clientes. Defina sua agenda, mostre seu talento e destaque-se em sua área." />
+            <DisplayTypography DisplayTypography="baixe o app agora e transforme seu lar com praticidade!" />
           </SubHeroHeadline>
           <ButtonSmooth
             activeClass="active"
@@ -57,9 +42,7 @@ export default function Hero() {
             offset={0}
             duration={1000}
           >
-            <DisplayTypography
-              DisplayTypography={'baixe grátis agora mesmo!'}
-            />
+            <DisplayTypography DisplayTypography="baixe grátis agora mesmo!" />
             <BsArrowDown />
           </ButtonSmooth>
           <RowItalicizedText>
