@@ -66,6 +66,7 @@ export const BannerHeadline = styled.div`
   justify-content: center;
   align-items: center;
 
+  /* Component DisplayTitle */
   h1 {
     color: ${props => props.theme.colors.colorC};
     font-style: normal;
@@ -112,6 +113,10 @@ export const ButtonStore = styled(Link)`
   color: ${props => props.theme.colors.colorC};
   border: solid ${props => props.theme.colors.colorC} 0.1rem;
   border-radius: 1rem;
+
+  @media (min-width: ${props => props.theme.screenSize.sizeLG}) {
+    width: 15.5rem;
+  }
 `
 export const ContentStore = styled.div`
   width: 100%;
