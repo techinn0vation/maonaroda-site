@@ -10,6 +10,6 @@ export const WrapperLayout = styled.main`
   justify-content: flex-start;
   align-items: center;
   gap: 3rem;
-  padding: 1.5rem 2rem 0;
+  padding: 1.5rem 2rem;
   overflow: hidden;
 `
