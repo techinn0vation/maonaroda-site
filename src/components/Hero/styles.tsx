@@ -80,7 +80,6 @@ export const SubHeroHeadline = styled.div`
 
   overflow-y: scroll;
   scroll-behavior: smooth;
-  direction: rtl;
 
   /* Component DisplayTypography */
   p {
@@ -95,6 +94,7 @@ export const SubHeroHeadline = styled.div`
       text-transform: capitalize;
     }
     margin-left: 1rem;
+    direction: ltr;
   }
 
   /* Scrollbar Lateral SubHeroHeadline */
