@@ -80,22 +80,6 @@ export const SubHeroHeadline = styled.div`
 
   overflow-y: scroll;
   scroll-behavior: smooth;
-  direction: rtl;
-
-  /* Component DisplayTypography */
-  p {
-    color: ${props => props.theme.colors.colorB};
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.4rem;
-    line-height: 2.1rem;
-    direction: ltr;
-    text-align: left;
-    &::first-letter {
-      text-transform: capitalize;
-    }
-    margin-left: 1rem;
-  }
 
   /* Scrollbar Lateral SubHeroHeadline */
   &::-webkit-scrollbar {
