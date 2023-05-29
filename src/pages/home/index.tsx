@@ -9,8 +9,8 @@ export default function Home() {
     <Layout>
       <Hero />
       <Banner title="faça o download do nosso aplicativo" text="" />
-      <Identification />
       <QuemSomos />
+      <Identification />
     </Layout>
   )
 }
