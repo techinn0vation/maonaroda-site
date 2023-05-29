@@ -1,14 +1,13 @@
 import styled from 'styled-components'
-import Image from 'next/image'
 import { Link } from 'react-scroll'
+import Image from 'next/image'
+
 import { BsArrowDownCircleFill } from 'react-icons/bs'
 
 export const WrapperHero = styled.header`
   width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: auto;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 3rem;
@@ -41,14 +40,15 @@ export const HeroHeadline = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
 
+  /* Component DisplayTitle */
   h1 {
     color: ${props => props.theme.colors.colorB};
     font-style: normal;
     font-weight: 700;
-    font-size: 2.3rem;
-    line-height: 3.45rem;
+    font-size: 2.2rem;
+    line-height: 3.3rem;
     text-transform: uppercase;
-    text-align: left;
+    text-align: center;
   }
 
   /* Configuração de Media MD (Medium)*/
@@ -64,7 +64,8 @@ export const HeroHeadline = styled.div`
   @media (min-width: ${props => props.theme.screenSize.sizeLG}) {
     h1 {
       font-size: 3.4rem;
-      line-height: 5.25rem;
+      line-height: 5.1rem;
+      text-align: left;
     }
   }
 `
@@ -81,6 +82,7 @@ export const SubHeroHeadline = styled.div`
   scroll-behavior: smooth;
   direction: rtl;
 
+  /* Component DisplayTypography */
   p {
     color: ${props => props.theme.colors.colorB};
     font-style: normal;
@@ -167,6 +169,7 @@ export const ButtonSmooth = styled(Link)`
   align-items: center;
   gap: 1rem;
 
+  /* Component DisplayTypography */
   p {
     font-style: normal;
     font-weight: 600;

@@ -3,12 +3,12 @@ import styled from 'styled-components'
 
 export const WrapperFooter = styled.footer`
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: auto;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
+  /* padding: 2rem; */
 
   &::before {
     content: '';
@@ -134,6 +134,7 @@ export const FooterLineEnd = styled.div`
   justify-content: center;
   align-items: center;
 
+  /* Component DisplayTypography */
   p {
     font-style: normal;
     font-weight: 600;

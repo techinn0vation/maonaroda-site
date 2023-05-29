@@ -3,10 +3,8 @@ import styled from 'styled-components'
 
 export const WrapperQuemSomos = styled.section`
   width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: auto;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 3rem;

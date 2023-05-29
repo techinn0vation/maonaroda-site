@@ -119,8 +119,9 @@ export const WrapperStoreButtons = styled.div`
 `
 export const ButtonStore = styled(Link)`
   width: 100%;
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
   padding: 0.5rem;
@@ -135,7 +136,7 @@ export const ButtonStore = styled(Link)`
   }
 `
 export const ContentStore = styled.div`
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -160,8 +161,22 @@ export const ContentStore = styled.div`
     font-size: 1.2rem;
     line-height: 1.8rem;
     color: ${props => props.theme.colors.colorC};
-    &::first-letter {
-      text-transform: capitalize;
+    text-transform: capitalize;
+  }
+
+  @media (max-width: ${props => props.theme.screenSize.sizeSM}) {
+    /* Component DisplayTitle*/
+    h1 {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 500;
+    }
+
+    /* Component DisplayTypography */
+    p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 600;
     }
   }
 `
