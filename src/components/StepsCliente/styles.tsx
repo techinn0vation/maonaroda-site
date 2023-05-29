@@ -16,6 +16,11 @@ export const WrapperStepByStep = styled.section`
   align-items: center;
   gap: 2rem;
   background: ${props => props.theme.colors.colorF};
+
+  /* Configuração de Media MD (Medium)*/
+  @media (min-width: ${props => props.theme.screenSize.sizeMD}) {
+    min-width: 100%;
+  }
 `
 export const HeadlineStepByStep = styled.div`
   width: 100%;
