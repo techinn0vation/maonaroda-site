@@ -14,7 +14,8 @@ export const GlobalStyle = createGlobalStyle`
   body {
     width: 100%;
     min-height: 100vh;
-    --webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
     text-rendering: optimizeLegibility;
     font-family: 'Poppins', sans-serif;
     background: ${globalBackground};
