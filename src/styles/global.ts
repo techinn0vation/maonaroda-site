@@ -18,5 +18,10 @@ export const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
     font-family: 'Poppins', sans-serif;
     background: ${globalBackground};
+
+    &::-webkit-scrollbar {
+    width: 0;
+    }
+
   }
 `
