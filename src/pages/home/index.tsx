@@ -1,8 +1,10 @@
-import Banner from '@/components/Banner'
-import Hero from '@/components/Hero'
-import Identification from '@/components/Identification'
-import Layout from '@/components/Layout'
-import QuemSomos from '@/components/QuemSomos'
+import {
+  Layout,
+  Hero,
+  Banner,
+  QuemSomos,
+  Identification
+} from '@/components/GeralComponents'
 
 export default function Home() {
   return (
