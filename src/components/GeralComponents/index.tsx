@@ -1,8 +1,8 @@
 import Layout from '../Layout'
 import Hero from '../Hero'
 import Banner from '../Banner'
+import Corporativo from '../Corporativo'
 import Identification from '../Identification'
-import QuemSomos from '../QuemSomos'
 import FormLogin from '@/components/Form'
 import Navigation from '../Navigation'
 import Footer from '../Footer'
@@ -13,7 +13,7 @@ export {
   ScrollProgress,
   Hero,
   Banner,
-  QuemSomos,
+  Corporativo,
   Identification,
   FormLogin,
   Navigation,
