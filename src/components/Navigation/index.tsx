@@ -29,7 +29,7 @@ export default function Navigation() {
         <ContentLinks isOpen={isOpen}>
           <DisplayLink href="/">home</DisplayLink>
           <DisplayLink href="/sobre">sobre nós</DisplayLink>
-          <DisplayLink href="/solicitar">solicitar serviços</DisplayLink>
+          <DisplayLink href="/">solicitar serviços</DisplayLink>
           <DisplayLink href="/login">
             <IconLogin />
             login

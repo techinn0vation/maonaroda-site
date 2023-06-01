@@ -48,7 +48,7 @@ export const HeroHeadline = styled.div`
     font-size: 2.2rem;
     line-height: 3.3rem;
     text-transform: uppercase;
-    text-align: center;
+    text-align: left;
   }
 
   /* Configuração de Media MD (Medium)*/
