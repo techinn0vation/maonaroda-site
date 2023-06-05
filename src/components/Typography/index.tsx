@@ -1,7 +1,7 @@
 import { RowTypography } from './styles'
 
 interface PropTypography {
-  DisplayTypography: string
+  DisplayTypography: string;
 }
 
 export default function DisplayTypography({

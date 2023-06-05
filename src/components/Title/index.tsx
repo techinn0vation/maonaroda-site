@@ -1,7 +1,7 @@
 import { RowTitle } from './styles'
 
 interface PropText {
-  DisplayTitle: string
+  DisplayTitle: string;
 }
 
 export default function DisplayTitle({ DisplayTitle }: PropText) {
